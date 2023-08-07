@@ -1,0 +1,111 @@
+.login {
+  /* Divide screen into pieces horizontally */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+/* Divide by two equal section with equal widths */
+.login-section {
+  position: relative;
+  width: 50%;
+}
+
+.login-section-container {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Set img background for right side section */
+.login-img_background {
+  width: 50%;
+  height: 100%;
+
+  background-image: url("src\assets\img\loginBackground.jpg");
+
+  /* Scale img */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-section-container-header-tittle {
+  font-size: 40px;
+}
+
+#login-section-container-header-p {
+  color: gray;
+}
+
+.login-section-container-function {
+  width: 100%;
+}
+
+.login-section-container-function p {
+  margin-bottom: 1px;
+}
+
+.login-section-container-emailField {
+  width: 100%;
+}
+
+.login-section-container-emailField input {
+  width: 100%;
+}
+
+.login-section-container-emailField mat-error {
+  color: red;
+  font-size: 10px;
+  margin-top: -1%;
+  margin-left: -2%;
+}
+
+.login-section-container-passwordField {
+  width: 100%;
+}
+
+.login-section-container-passwordField input {
+  width: 100%;
+}
+
+.login-section-container-passwordField mat-error {
+  color: red;
+  font-size: 10px;
+  margin-top: -1%;
+  margin-left: -2%;
+}
+
+.login-section-container-loginOption {
+  display: flex;
+  flex-direction: row;
+  font-size: smaller;
+  width: 100%;
+  padding-bottom: -2%;
+}
+
+.login-section-container-loginOption a {
+  text-decoration: none;
+  /* Divide into to 2 equal field */
+  width: 50%;
+  text-align: right;
+  line-height: 3;
+}
+
+.login-section-container-loginOption mat-checkbox {
+  /* Divide into to 2 equal field */
+  width: 50%;
+  float: left;
+  padding-left: 0 !important;
+}
+
+.mdc-checkbox__native-controlmdc-checkbox__native-control {
+  padding-left: 0;
+}
+
+.login-button {
+  width: 100%;
+  margin-bottom: 2%;
+}
