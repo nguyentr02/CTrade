@@ -8,7 +8,12 @@
 /* Divide by two equal section with equal widths */
 .login-section {
   position: relative;
-  width: 50%;
+  width: 55%;
+  background-color: black;
+  /* filter: drop-shadow(
+    20px 20px 50px var(--shadow-color)
+  );
+  --shadow-color: hsla(165, 100%, 40%, 0.9); */
 }
 
 .login-section-container {
@@ -17,15 +22,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 5%;
+  background-color: black;
+  border-radius: 5%;
+  border: 1px solid;
+  /* box-shadow: 5px 10px white;; */
+  filter: drop-shadow(10px 20px 50px var(--shadow-color));
+  --shadow-color: hsla(165, 100%, 40%, 0.9);
 }
 
 /* Set img background for right side section */
 .login-img_background {
-  width: 50%;
+  width: 45%;
   height: 100%;
 
-  background-image: url("src\assets\img\loginBackground.jpg");
-
+  background-image: url("src\assets\img\test2.jpg");
+  box-shadow: 10px 8px 10px 15px black;
   /* Scale img */
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +49,7 @@
 }
 
 #login-section-container-header-p {
-  color: gray;
+  color: white;
 }
 
 .login-section-container-function {
@@ -54,6 +66,7 @@
 
 .login-section-container-emailField input {
   width: 100%;
+  border-color: white;
 }
 
 .login-section-container-emailField mat-error {
@@ -84,6 +97,7 @@
   font-size: smaller;
   width: 100%;
   padding-bottom: -2%;
+  margin-top: -3%;
 }
 
 .login-section-container-loginOption a {
@@ -91,16 +105,34 @@
   /* Divide into to 2 equal field */
   width: 50%;
   text-align: right;
-  line-height: 3;
+  vertical-align: middle;
+  /* color: slateblue; */
+  padding: 3% 0;
 }
 
 .login-section-container-loginOption mat-checkbox {
   /* Divide into to 2 equal field */
   width: 50%;
   float: left;
+  color: blueviolet;
   padding-left: 0 !important;
 }
 
+/*  */
+/* mat-checkbox {
+  color: rgb(0,178,0);
+  /deep/ .mat-checkbox-background {
+      background-color: rgb(0,178,0);
+  }
+
+  /deep/ &.mat-checkbox-focused{
+      .mat-ink-ripple{
+          background-color: rgba(0, 178, 0, .26);
+      }
+  }
+} */
+
+/*  */
 .mdc-checkbox__native-controlmdc-checkbox__native-control {
   padding-left: 0;
 }
@@ -108,4 +140,24 @@
 .login-button {
   width: 100%;
   margin-bottom: 2%;
+}
+
+h1,
+p {
+  color: hsla(165, 100%, 40%, 0.9);
+}
+
+input::placeholder {
+  color: white !important;
+}
+
+input,
+select,
+textarea {
+  color: hsla(165, 100%, 40%, 0.9) !important;
+  border: 1px solid white !important;
+}
+
+a {
+  color: blue;
 }
