@@ -22,14 +22,9 @@
                 </mat-form-field>
             </div>
 
-            <!-- Need additonal code for BE function -->
-            <section class="login-section-container-loginOption">
-                <mat-checkbox color="primary">Remember me!</mat-checkbox>
-                <a routerLink="/forgotPassword">Forgot password?</a>
-            </section>
             <!-- Temporary go directly to main page, when move to stage 2 and imply BE, need to be change -->
             <button class="login-button" mat-raised-button color="primary" (click)="verifyAccount()">Sign in</button>
-            <p>Don't have an account? <a routerLink="/register">Sign up</a> now</p>
+            <p>Don't have an account? <a color="primary" routerLink="/register">Sign up</a> now</p>
         </div>
 
     </div>
