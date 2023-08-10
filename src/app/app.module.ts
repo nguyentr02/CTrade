@@ -16,7 +16,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { MarketComponent } from './market/market.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { MarketComponent } from './market/market.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent,
     MarketComponent
   ],
   imports: [

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   verifyAccount() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/market']);
   }
   getErrorPasswordMessage() {
     if (this.email.hasError('required')) {
