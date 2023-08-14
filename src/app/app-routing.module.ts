@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:'',component: LoginComponent,pathMatch:'full'},
   {path:'register',component: RegisterComponent},
   {path:'market',component:MarketComponent},
+  {path:'nav',component:NavbarComponent}
 ];
 
 @NgModule({
