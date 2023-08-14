@@ -29,5 +29,37 @@
 
     </div>
 
+    
+
     <div class="login-img_background"></div>
+    
+</div>
+<div class="mobile-login-section">
+    <div class="mobile-login-section-container">
+        <div class="mobile-login-section-container-header">
+            <h1 class="mobile-login-section-container-header-tittle">Welcome billionare</h1>
+            <p id="mobile-login-section-container-header-p">Please enter your details!</p>
+        </div>
+        <div class="mobile-login-section-container-function">
+            <p>Email</p>
+            <mat-form-field class="mobile-login-section-container-emailField" appearance="outline">
+                <input class="mobile-login-emailInput" type="email" matInput placeholder="Enter you email"
+                    [formControl]="email" required>
+                <!-- Display error and verify email using function-->
+                <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
+            </mat-form-field>
+            <p>Password</p>
+            <mat-form-field class="mobile-login-section-container-passwordField" appearance="outline">
+                <input class="mobile-login-passwordInput" type="password" matInput placeholder="Enter you password"
+                    [formControl]="password" required>
+                <!-- Display error and verify email using function-->
+                <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Temporary go directly to main page, when move to stage 2 and imply BE, need to be change -->
+        <button class="mobile-login-button" mat-raised-button color="primary" (click)="verifyAccount()">Sign in</button>
+        <p>Don't have an account? <a color="primary" routerLink="/register">Sign up</a> now</p>
+    </div>
+
 </div>
