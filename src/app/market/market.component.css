@@ -1,0 +1,98 @@
+/*mat-grid-tile {
+    background: lightblue;
+}
+*/
+.marketPlace{
+    /*must-have*/
+    background-image: url("src/assets/img/bckgr.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.marketPlace-header{
+    padding: 5% 5% 0 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.market-filter-title {
+    width: 50%;
+}
+
+.market-filter {
+    width: 50%;
+    /* float: right; */
+}
+
+.market-filter mat-icon {
+    float: right;
+}
+
+img {
+    border-radius: 10% 10% 0 0;
+}
+
+.marketPlace-body-product-infoBox{
+    background-color: black;
+    border-radius: 0 0 12% 12%;
+    padding: 5%;
+    margin-top: -3%;
+}
+
+.marketPlace-body-product-info{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+}
+
+.marketPlace-body-product-info1, .marketPlace-body-product-info2{
+    width: 50%;
+}
+
+
+.header, .marketPlace-header{
+    color: #00CC99;
+    font-size: 2vw;
+}
+
+.sub-header {
+    color: #292D32;
+    font-size: 1.5vw;
+}
+
+.info {
+    color: white;
+    font-size: 1vw;
+}
+
+.marketPlace-body-product-box {
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+}
+
+.market-navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    padding-bottom: 4%;
+}
+
+.market-navigator .prev-btn, .market-navigator .next-btn{
+    display: flex;
+    flex-direction: row;
+    background-color: #00CC99;
+    padding: 1% 1% 0.5% 1%;
+}
+
+.market-navigator p{
+    color: white;
+}
+
+
+
+

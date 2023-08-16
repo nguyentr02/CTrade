@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule,Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarketComponent } from './market/market.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { MarketComponent } from './market/market.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    MarketComponent
+    MarketComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { MarketComponent } from './market/market.component';
     MatInputModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
