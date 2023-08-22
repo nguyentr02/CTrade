@@ -1,5 +1,5 @@
 <div class="navbar">
-    <img routerLink="/home" class="navbar-logo" src="assets\img\loginBackground.jpg"/>
+    <img routerLink="/home" class="navbar-logo" src="assets\img\favicon.ico"/>
     <div class="navbar-search">
         <mat-icon>search</mat-icon>
         <input class="navbar-search-input" placeholder="Search items, category"/>
@@ -8,6 +8,20 @@
         <a routerLink="/">History</a>
     </div>
     <div class="navbar-personal">
+        <mat-icon routerLink="/">person</mat-icon>    
+    </div>
+</div>
+
+<!--For mobile-->
+<div class="mobile-navbar">
+    <img routerLink="/home" class="mobile-navbar-logo" src="assets\img\favicon.ico"/>
+    <div class="mobile-navbar-search">
+        <mat-icon>search</mat-icon>
+    </div>
+    <div class="mobile-navbar-history">
+        <mat-icon routerLink="/">history</mat-icon>
+    </div>
+    <div class="mobile-navbar-personal">
         <mat-icon routerLink="/">person</mat-icon>    
     </div>
 </div>

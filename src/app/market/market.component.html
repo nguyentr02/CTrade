@@ -3,9 +3,9 @@
 <div class="marketPlace">
     <div class="marketPlace-header">
         <div class="market-filter-title">
-            <p> MARKET PLACE</p>
+            <h3>MARKET PLACE</h3>
         </div>
-        <div class = "market-filter">
+        <div class="market-filter">
             <mat-icon>filter_list</mat-icon>
         </div> 
     </div>
@@ -133,6 +133,71 @@
         <div class = "next-btn">
             <p>Next</p>
             <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_forward_ios </span>
+        </div>
+    </div>
+</div>
+
+<!--For mobile-->
+<div class="mobile-marketPlace">
+    <div class="mobile-marketPlace-header">
+        <div class="mobile-filter-title">
+            <h3>MARKET PLACE</h3>
+        </div>
+        <div class="mobile-market-filter">
+            <mat-icon>filter_list</mat-icon>
+        </div>
+    </div>
+    <mat-grid-list cols="1" rowHeight="1:1" class="mobile-marketPlace-body">
+        <mat-grid-tile class="mobile-marketPlace-body-product">
+            <div class="mobile-marketPlace-body-product-box">
+                <img src="assets/img/bitcoin.jpg" width=100% height=70%>
+                <div class="mobile-marketPlace-body-product-infoBox">
+                    <p class="mobile-header">Bitcoin</p>
+                    <div class="mobile-marketPlace-body-product-info">
+                        <div>
+                            <p class="mobile-sub-header">Price</p>
+                            <p class="mobile-info">$200</p>
+                        </div>
+                        <div>
+                            <p class="mobile-sub-header">Quantity</p>
+                            <p class="mobile-info">400</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="mobile-marketPlace-body-product">
+            <div class="mobile-marketPlace-body-product-box">
+                <img src="assets/img/bitcoin.jpg" width=100% height=70%>
+                <div class="mobile-marketPlace-body-product-infoBox">
+                    <p class="mobile-header">Bitcoin</p>
+                    <div class="mobile-marketPlace-body-product-info">
+                        <div>
+                            <p class="mobile-sub-header">Price</p>
+                            <p class="mobile-info">$200</p>
+                        </div>
+                        <div>
+                            <p class="mobile-sub-header">Quantity</p>
+                            <p class="mobile-info">400</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+    
+    <div class="mobile-market-navigator">
+        <!--link icon https://fontawesomeicons.com/materialdesign/icons/arrow_right-->
+        <div class="mobile-prev-btn">
+            <span class="material-icons">arrow_back_ios_new</span>
+        </div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <div class="mobile-next-btn">
+            <span class="material-icons">arrow_forward_ios</span>
         </div>
     </div>
 </div>
