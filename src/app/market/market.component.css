@@ -18,7 +18,7 @@
     }
 
     .market-filter-title {
-        width: 50%;
+        width: 50%; 
     }
 
     .market-filter {
@@ -62,7 +62,7 @@
     }
 
     .sub-header {
-        color: #292D32;
+        color: #2788ff;
         font-size: 1.5vw;
     }
 
@@ -99,6 +99,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+    h3 {
+        margin-top: 15%;
+    }
+
     .marketPlace {
         display: none;
     }
@@ -112,9 +116,11 @@
     }
 
     .mobile-marketPlace-header {
-        padding: 5% 5% 0 5%;
+        margin: 0% 0% 0% 0%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .mobile-market-filter-title {
@@ -153,8 +159,8 @@
     }
 
     .mobile-sub-header {
-        color: #292D32;
-        font-size: 1.5vw;
+        color: #2788ff;
+        font-size: 4vw;
     }
 
     .mobile-info {
