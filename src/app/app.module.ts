@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarketComponent } from './market/market.component';
 import { FooterComponent } from './footer/footer.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     RegisterComponent,
     MarketComponent,
-    FooterComponent
+    FooterComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
