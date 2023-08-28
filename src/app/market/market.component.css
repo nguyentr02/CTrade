@@ -21,6 +21,10 @@
         width: 50%; 
     }
 
+    .market-filter-title p{
+        width: 80%; 
+    }
+
     .market-filter {
         width: 50%;
         /* float: right; */
@@ -37,7 +41,7 @@
     .marketPlace-body-product-infoBox {
         background-color: black;
         border-radius: 0 0 12% 12%;
-        padding: 5%;
+        padding: 10%;
         margin-top: -3%;
     }
 
@@ -62,7 +66,7 @@
     }
 
     .sub-header {
-        color: #2788ff;
+        color: #292D32;
         font-size: 1.5vw;
     }
 
@@ -84,6 +88,7 @@
         justify-content: center;
         gap: 5rem;
         padding-bottom: 4%;
+        padding-top: 4%;
     }
 
     .market-navigator .prev-btn, .market-navigator .next-btn {
@@ -159,7 +164,7 @@
     }
 
     .mobile-sub-header {
-        color: #2788ff;
+        color: #292D32;
         font-size: 4vw;
     }
 
