@@ -1,1 +1,96 @@
-<p>register works!</p>
+<div class="register">
+    <div class="register-section">
+        <div class="register-section-container">
+            <div class="register-section-container-header">
+                <h1 class="register-section-container-header-tittle">Welcome investor</h1>
+                <p id="register-section-container-header-p">Please enter your details!</p>
+            </div>
+            <div class="register-section-container-function">
+                <p>First Name</p>
+                <mat-form-field class="register-section-container-firstNameField" appearance="outline">
+                    <input class="register-firstNameInput" type="firstName" matInput placeholder="Enter your first name"
+                        [formControl]="firstName" required>
+                    <!-- Display error and verify first name using function-->
+                    <mat-error *ngIf="firstName.invalid">{{getErrorFirstNameMessage()}}</mat-error>
+                </mat-form-field>
+
+                <p>Given Name</p>
+                <mat-form-field class="register-section-container-givenNameField" appearance="outline">
+                    <input class="register-firstNameInput" type="givenName" matInput placeholder="Enter your given name"
+                        [formControl]="givenName" required>
+                    <!-- Display error and verify first name using function-->
+                    <mat-error *ngIf="givenName.invalid">{{getErrorGivenNameMessage()}}</mat-error>
+                </mat-form-field>
+
+                <p>Email</p>
+                <mat-form-field class="register-section-container-emailField" appearance="outline">
+                    <input class="register-emailInput" type="email" matInput placeholder="Enter your email"
+                        [formControl]="email" required>
+                    <!-- Display error and verify email using function-->
+                    <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
+                </mat-form-field>
+
+                <p>Password</p>
+                <mat-form-field class="register-section-container-passwordField" appearance="outline">
+                    <input class="register-passwordInput" type="password" matInput placeholder="Enter your password"
+                        [formControl]="password" required>
+                    <!-- Display error and verify password using function-->
+                    <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- Temporary go directly to main page, when move to stage 2 and imply BE, need to be change -->
+            <button class="register-button" mat-raised-button color="primary" (click)="verifyAccount()">Register</button>
+            <p>Already have an account <a color="primary" routerLink="/">Log in</a> now</p>
+        </div>
+
+    </div>
+</div>
+
+<!--For mobile-->
+<div class="mobile-register-section">
+    <div class="mobile-register-section-container">
+        <div class="mobile-register-section-container-header">
+            <h1 class="mobile-register-section-container-header-tittle">Welcome investor</h1>
+            <p id="mobile-register-section-container-header-p">Please enter your details!</p>
+        </div>
+        <div class="mobile-register-section-container-function">
+            <p>First Name</p>
+            <mat-form-field class="mobile-register-section-container-firstNameField" appearance="outline">
+                <input class="mobile-register-firstNameInput" type="firstName" matInput placeholder="Enter your first name"
+                    [formControl]="firstName" required>
+                <!-- Display error and verify first name using function-->
+                <mat-error *ngIf="firstName.invalid">{{getErrorFirstNameMessage()}}</mat-error>
+            </mat-form-field>
+
+            <p>Given Name</p>
+            <mat-form-field class="mobile-register-section-container-givenNameField" appearance="outline">
+                <input class="mobile-register-firstNameInput" type="givenName" matInput placeholder="Enter your given name"
+                    [formControl]="givenName" required>
+                <!-- Display error and verify first name using function-->
+                <mat-error *ngIf="givenName.invalid">{{getErrorGivenNameMessage()}}</mat-error>
+            </mat-form-field>
+
+            <p>Email</p>
+            <mat-form-field class="mobile-register-section-container-emailField" appearance="outline">
+                <input class="mobile-register-emailInput" type="email" matInput placeholder="Enter your email"
+                    [formControl]="email" required>
+                <!-- Display error and verify email using function-->
+                <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
+            </mat-form-field>
+
+            <p>Password</p>
+            <mat-form-field class="mobile-register-section-container-passwordField" appearance="outline">
+                <input class="mobile-register-passwordInput" type="password" matInput placeholder="Enter your password"
+                    [formControl]="password" required>
+                <!-- Display error and verify password using function-->
+                <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Temporary go directly to main page, when move to stage 2 and imply BE, need to be change -->
+        <button class="mobile-register-button" mat-raised-button color="primary" (click)="verifyAccount()">Register</button>
+        <p>Already have an account <a color="primary" routerLink="/">Log in</a> now</p>
+    </div>
+
+</div>
