@@ -6,16 +6,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MarketComponent } from './market/market.component';
 import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './history/history.component';
+import { PersonalInfomationComponent} from './personal-infomation/personal-infomation.component';
 
 const routes: Routes = [
-  {path:'',component: LoginComponent,pathMatch:'full'},
-  {path:'register',component: RegisterComponent},
-  {path:'market',component:MarketComponent},
+  {path:'', component: LoginComponent,pathMatch:'full'},
+  {path:'register', component: RegisterComponent},
+  {path:'market', component: MarketComponent},
 
   /*nav and head for testing purpose only*/
-  {path:'nav',component:NavbarComponent},
-  {path:'footer',component:FooterComponent},
-  {path:'history',component:HistoryComponent}
+  {path:'nav', component: NavbarComponent},
+  {path:'footer', component: FooterComponent},
+  {path:'history', component: HistoryComponent},
+  {path:'personal-info', component: PersonalInfomationComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<div class="pInfo">
+    <div class="pInfo-buttons">
+        <button class="pInfo-profile" title="Profile">
+            <mat-icon routerLink="/">person</mat-icon> 
+            <p class="pInfo-buttons-text">Profile</p> 
+        </button>
+
+        <button class="pInfo-security" title="Account Security">
+            <mat-icon routerLink="/">security</mat-icon>  
+            <p class="pInfo-buttons-text">Account Security</p> 
+        </button>
+
+        <button class="pInfo-notifications" title="Notifications">
+            <mat-icon routerLink="/">notifications</mat-icon>  
+            <p class="pInfo-buttons-text">Notifications</p> 
+        </button>
+    </div>
+
+    <div class="pInfo-content">
+        <h1>PROFILE</h1>
+        <br>
+        <hr>
+        <br>
+        <h2>About me</h2>
+        <br>
+        <h3>Avatar</h3>
+        <div class="pInfo-avatarSection">
+            <div class="pInfo-avatarSection-avatar"></div>
+            <div class="pInfo-avatarSection-editAvatar-button">
+                <button mat-raised-button color="primary">Edit Avatar</button> 
+            </div>
+        </div>
+        <br>
+        <h3>Display Name</h3>
+        <div class="pInfo-nameSection">
+            <button class="pInfo-nameSection-firstName" title="Edit First Name">Arena</button>
+            <button class="pInfo-nameSection-givenName" title="Edit Given Name">of Valor</button>
+        </div>
+        <br>
+        <h3>Email</h3>
+        <div class="pInfo-emailSection">
+            <p class="pInfo-emailSection-email">arenaofvalor@garena.com</p>
+            <div class="pInfo-emailSection-editEmail">
+                <button mat-raised-button color="primary">Edit Email</button> 
+            </div>
+        </div>
+        <br>
+        <h3>Bio</h3>
+        <mat-form-field class="pInfo-bioSection" appearance="outline">
+            <input class="pInfo-bioSection-bioInput" matInput placeholder="Enter your password" required>
+        </mat-form-field>
+    </div>
+</div>

@@ -1,0 +1,208 @@
+@media (min-width: 480px) {
+    .pInfo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pInfo-buttons {
+        width: 25%;
+        padding: 5% 0% 0% 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pInfo-buttons-text {
+        font-size: 2vh;
+        margin: 0% 1% 0% 20%;
+    }
+
+    .pInfo-content {
+        width: 75%;
+        padding: 5%;
+    }
+
+    .pInfo-profile, .pInfo-security, .pInfo-notifications {
+        width: 70%;
+        justify-content: left;
+        align-items: center;
+        margin: 5%;
+        padding: 5%;
+        background: rgba(173, 255, 255, 0.3);
+        border: none;
+        border-radius: 15px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pInfo-avatarSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pInfo-avatarSection-editAvatar-button {
+        margin-left: auto;
+    }
+
+    .pInfo-avatarSection-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+
+        background-image: url("src\assets\img\liteCoin.jpg");
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .pInfo-nameSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .pInfo-nameSection-firstName, .pInfo-nameSection-givenName {
+        border-radius: 10px;
+        border: 1px solid #aaa;
+        padding: 1%;
+        margin: 0% 1% 0% 1%;
+    }
+
+    .pInfo-emailSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pInfo-emailSection-email {
+        padding-left: 3%;
+    }
+
+    .pInfo-bioSection {
+        width: 100%;
+        height: 300px;
+    }
+
+    h1 {
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .pInfo-buttons-text {
+        display: none;
+    }
+
+    .pInfo-profile, .pInfo-security, .pInfo-notifications {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pInfo-buttons {
+        width: 100%;
+        padding: 3% 0% 0% 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10%;
+    }
+
+    .pInfo-profile, .pInfo-security, .pInfo-notifications {
+        width: 22%;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
+        padding: 5%;
+        background: rgba(173, 255, 255, 0.3);
+        border: none;
+        border-radius: 15px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pInfo-content {
+        margin: 0% 5% 0% 5%;
+    }
+
+    .pInfo-avatarSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pInfo-avatarSection-editAvatar-button {
+        margin-left: auto;
+    }
+
+    .pInfo-avatarSection-avatar {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20px;
+
+        background-image: url("src\assets\img\liteCoin.jpg");
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .pInfo-nameSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .pInfo-nameSection-firstName, .pInfo-nameSection-givenName {
+        border-radius: 10px;
+        border: 1px solid #aaa;
+        padding: 2.5%;
+        margin: 0% 1% 0% 1%;
+    }
+
+    .pInfo-emailSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pInfo-emailSection-email {
+        padding-left: 3%;
+    }
+
+    .pInfo-bioSection {
+        width: 100%;
+        height: 300px;
+    }
+
+    h1 {
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-weight: bolder;
+        font-size: x-large;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+}

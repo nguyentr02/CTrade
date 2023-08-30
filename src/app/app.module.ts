@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarketComponent } from './market/market.component';
 import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './history/history.component';
+import { PersonalInfomationComponent } from './personal-infomation/personal-infomation.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HistoryComponent } from './history/history.component';
     RegisterComponent,
     MarketComponent,
     FooterComponent,
-    HistoryComponent
+    HistoryComponent,
+    PersonalInfomationComponent
   ],
   imports: [
     BrowserModule,
