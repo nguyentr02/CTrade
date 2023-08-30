@@ -37,10 +37,11 @@
         border-radius: 10px;
         /*padding: 10px;*/
         margin: 10px;
+        padding-left: 2%;
     }
 
     .navbar-search mat-icon, .navbar-personal mat-icon, .navbar a {
-        padding: 10px;
+        /* padding: 10px; */
         color: white;
         height: 50%;
     }
@@ -51,7 +52,7 @@
         border: none;
     }
 
-    .test {
+    .navbar-test  {
         display: flex;
         flex-direction: row;
         margin: 8px;
@@ -74,9 +75,13 @@
         padding: 10px;
     }
 
-    .test-transparent-bckgr{
-        color: black;
+    .navbar-personal mat-icon {
+        height: 50%;
+        margin-top: 25%;
     }
+    /* .test-transparent-bckgr{
+        color: black;
+    } */
 }
 
 @media only screen and (max-width: 480px) {

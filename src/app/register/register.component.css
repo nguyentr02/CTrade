@@ -1,154 +1,147 @@
-@media (min-width: 480px) {
-    .mobile-register-section {
-        display: none;
-    }
-    
-    .register {
-        /* Divide screen into pieces horizontally */
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-    }
+.register-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
 
-    .register-button {
-        width: 100%;
-        margin-bottom: 2%;
-    }
-
-    .register-section {
-        position: relative;
-        width: 100%;
+.register-section-backgroundImage {        
+    position: relative;
+    width: 100%;
             
-        background-image: url("src\assets\img\ETH.jpg");
+    background-image: url("src\assets\img\ETH.jpg");
     
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* filter: drop-shadow(
-        20px 20px 50px var(--shadow-color)
-    );
-        --shadow-color: hsla(165, 100%, 40%, 0.9); */
-    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.register-button {
+    width: 100%;
+    margin-bottom: 2%;
+}
   
-    .register-section-container {
-        position: absolute;
-        width: 25%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 5%;
-        background-color: black;
-        border-radius: 5%;
-        border: 1px solid;
-        /* box-shadow: 5px 10px white;; */
-        filter: drop-shadow(10px 20px 50px var(--shadow-color));
-        --shadow-color: hsla(165, 100%, 40%, 0.9);
-    }
+.register-section-container {
+    position: absolute;
+    transform: translate(-50%, -50%, -50%, -50%);
+    padding: 5%;
+    margin: 5% 37.5% 0% 33%;
+    background-color: black;
+    border-radius: 5%;
+    border: 1px solid;
+    /* box-shadow: 5px 10px white;; */
+        
+    filter: drop-shadow(10px 20px 50px var(--shadow-color));
+    --shadow-color: hsla(165, 100%, 40%, 0.9);
+}
   
-    .register-section-container-header-tittle {
-        font-size: 40px;
-    }
+#register-section-container-header-p {
+    color: white;
+}
   
-    #register-section-container-header-p {
-        color: white;
-    }
+.register-section-container-function {
+    max-height: 30vh; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    width: 100%;
+
+    margin: 10% 0% 10% 0%;
+}
   
-    .register-section-container-function {
-        width: 100%;
-    }
-  
-    .register-section-container-function p {
-        margin-bottom: 1px;
-    }
+.register-section-container-function p {
+    margin-bottom: 1px;
+}
       
-    .register-section-container-firstNameField {
-        width: 100%;
-    }
+.register-section-container-firstNameField {
+    width: 90%;
+}
   
-    .register-section-container-firstNameField input {
-        width: 100%;
-    }
+.register-section-container-firstNameField input {
+    width: 90%;
+}
   
-    .register-section-container-firstNameField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
+.register-section-container-firstNameField mat-error {
+    color: red;
+    font-size: 10px;
+    margin-top: -1%;
+    margin-left: -2%;
+}
       
-    .register-section-container-givenNameField {
-        width: 100%;
-    }
+.register-section-container-givenNameField {
+    width: 90%;
+}
   
-    .register-section-container-givenNameField input {
-        width: 100%;
-    }
+.register-section-container-givenNameField input {
+    width: 90%;
+}
   
-    .register-section-container-givenNameField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
+.register-section-container-givenNameField mat-error {
+    color: red;
+    font-size: 10px;
+    margin-top: -1%;
+    margin-left: -2%;
+}
+ 
+.register-section-container-emailField {
+    width: 90%;
+}
   
-    .register-section-container-emailField {
-        width: 100%;
-    }
+.register-section-container-emailField input {
+    width: 90%;
+    border-color: white;
+}
   
-    .register-section-container-emailField input {
-        width: 100%;
-        border-color: white;
-    }
+.register-section-container-emailField mat-error {
+    color: red;
+    font-size: 10px;
+    margin-top: -1%;
+    margin-left: -2%;
+}
   
-    .register-section-container-emailField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
+.register-section-container-passwordField {
+    width: 90%;
+}
   
-    .register-section-container-passwordField {
-        width: 100%;
-    }
+.register-section-container-passwordField input {
+    width: 90%;
+}
   
-    .register-section-container-passwordField input {
-        width: 100%;
-    }
+.register-section-container-passwordField mat-error {
+    color: red;
+    font-size: 10px;
+    margin-top: -1%;
+    margin-left: -2%;
+}
   
-    .register-section-container-passwordField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
+.register-section-container-registerOption {
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    width: 100%;
+    padding-bottom: -2%;
+    margin-top: -3%;
+}
   
-    .register-section-container-registerOption {
-        display: flex;
-        flex-direction: row;
-        font-size: smaller;
-        width: 100%;
-        padding-bottom: -2%;
-        margin-top: -3%;
-    }
+.register-section-container-registerOption a {
+    text-decoration: none;
+    /* Divide into to 2 equal field */
+    width: 50%;
+    text-align: right;
+    vertical-align: middle;
+    /* color: slateblue; */
+    padding: 3% 0;
+}
   
-    .register-section-container-registerOption a {
-        text-decoration: none;
-        /* Divide into to 2 equal field */
-        width: 50%;
-        text-align: right;
-        vertical-align: middle;
-        /* color: slateblue; */
-        padding: 3% 0;
-    }
-  
-    .register-section-container-registerOption mat-checkbox {
-        /* Divide into to 2 equal field */
-        width: 50%;
-        float: left;
-        color: blueviolet;
-        padding-left: 0 !important;
-    }
+.register-section-container-registerOption mat-checkbox {
+    /* Divide into to 2 equal field */
+    width: 50%;
+    float: left;
+    color: blueviolet;
+    padding-left: 0 !important;
+}
   
     /*  */
     /* mat-checkbox {
@@ -165,127 +158,8 @@
   } */
   
     /*  */
-    .mdc-checkbox__native-controlmdc-checkbox__native-control {
-        padding-left: 0;
-    }
-
-    h1 {
-        font-size: 8vw;
-    }
-}
-  
-@media only screen and (max-width: 480px) {
-    .register {
-        display: none;
-    }
-  
-    .mobile-register-button {
-        margin-bottom: 5%;
-    }
-  
-    .mobile-register-section {
-        position: relative;
-        height: 100%;
-        width: 100%;
-    
-        background-image: url("src\assets\img\bckgr_2.jpg");
-    
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-  
-    .mobile-register-section-container {
-        position: absolute;
-        width: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 7%;
-        padding-left: 10%;
-        padding-right: 10%;
-        background-color: black;
-        border-radius: 5%;
-        border: 1px solid;
-        /* box-shadow: 5px 10px white;; */
-        filter: drop-shadow(10px 20px 50px var(--shadow-color));
-        --shadow-color: hsla(165, 100%, 40%, 0.9);
-    }
-
-    .mobile-register-section-container-function {
-        max-height: 40vh; /* Adjust the maximum height as needed */
-        overflow-y: auto;
-        margin: 10% 0% 10% 0%;
-    }
-
-    .mobile-register-section-container-firstNameField {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-firstNameField input {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-firstNameField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
-      
-    .mobile-register-section-container-givenNameField {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-givenNameField input {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-givenNameField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
-  
-    .mobile-register-section-container-emailField {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-emailField input {
-        width: 100%;
-        border-color: white;
-    }
-  
-    .mobile-register-section-container-emailField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
-  
-    .mobile-register-section-container-passwordField {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-passwordField input {
-        width: 100%;
-    }
-  
-    .mobile-register-section-container-passwordField mat-error {
-        color: red;
-        font-size: 10px;
-        margin-top: -1%;
-        margin-left: -2%;
-    }
-  
-    #mobile-register-section-container-header-p {
-        color: white;
-    }
-
-    h1 {
-        font-size: 8vw;
-    }
+.mdc-checkbox__native-controlmdc-checkbox__native-control {
+    padding-left: 0;
 }
 
 h1, p {
@@ -303,4 +177,46 @@ input, select, textarea {
 
 a {
     color: blue;
+}
+
+@media (min-width: 480px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    .register-section-container {
+        width: 25%;
+        position: absolute;
+        transform: translate(-50%, -50%, -50%, -50%);
+        padding: 5%;
+        margin: 5% 37.5% 0% 33%;
+        background-color: black;
+        border-radius: 5%;
+        border: 1px solid;
+        /* box-shadow: 5px 10px white;; */
+            
+        filter: drop-shadow(10px 20px 50px var(--shadow-color));
+        --shadow-color: hsla(165, 100%, 40%, 0.9);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .register-section-container {
+        width: 70%;
+        position: absolute;
+        transform: translate(-50%, -50%, -50%, -50%);
+        padding: 5%;
+        margin: 25% 10% 25% 10%;
+        background-color: black;
+        border-radius: 5%;
+        border: 1px solid;
+        /* box-shadow: 5px 10px white;; */
+            
+        filter: drop-shadow(10px 20px 50px var(--shadow-color));
+        --shadow-color: hsla(165, 100%, 40%, 0.9);
+    }
 }
