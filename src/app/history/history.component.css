@@ -1,0 +1,124 @@
+/* test */
+.history {
+    margin-top: 2%;
+    margin-bottom: 8%;
+    height: 90%;
+}
+
+.history-header {
+    width: 50%;
+    height: 20%;
+    padding: 1%;
+    margin-left: 25%;
+}
+
+.history-section {
+    width: 50%;
+    height: 80%;
+    padding: 1%;
+    margin-left: 25%;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 1px solid;
+    filter: drop-shadow(10px 20px 50px var(--shadow-color));
+    --shadow-color: hsla(165, 100%, 40%, 0.9);
+}
+/* mat-tab */
+
+.mat_tab_ne label{
+    color: red !important;
+}
+
+
+/* section-function */
+.history-section-function-search {
+    display: flex;
+    flex-direction: row;
+    background: rgba(27, 228, 228, 0.3);    
+    justify-content: left;
+    align-items: center;
+    width: 20%;
+    height: 70%;
+    border-radius: 10px;
+    /*padding: 10px;*/
+    margin: 10px;
+    padding-left: 2%;
+}
+
+.history-section-function-search mat-icon {
+    /* padding: 10px; */
+    color: white;
+    height: 50%;
+}
+
+.history-search-input {
+    /* width: 70%; */
+    background-color: rgba(124, 124, 124, 0);
+    border: none;
+}
+
+.history-section-function-search, .history-section-function-filter {
+    width: 50%; 
+}
+
+.history-section-function-filter mat-icon {
+    float: right;
+    color: teal;
+}
+
+/*  */
+.history-section-function {
+    display: flex;
+    flex-direction: row;
+}
+
+.history-section-transaction-header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+}
+
+.history-table-header th {
+    color: teal;
+}
+
+.history-trade {
+    padding-right: 10vw !important;
+}
+
+.history-amount, .history-unit, .history-price, .history-date,.history-status {
+    padding-right: 2vw !important;
+}
+
+th, td {
+    padding-bottom: 2vw;
+}
+
+/* .history-section-transaction-navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+
+.history-prev-btn, .history-next-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: #00CC99;
+    padding: 1% 1% 0.5% 1%;
+}
+
+.history-section-transaction-navigator p {
+    color: white;
+} */
+
+/* status condition */
+.history-fail {
+    color: red;
+}
+
+.history-processing {
+    color: green;
+}

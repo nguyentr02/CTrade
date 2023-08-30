@@ -1,6 +1,6 @@
 import { NgModule,Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
@@ -47,7 +47,8 @@ import { PersonalInfomationComponent } from './personal-infomation/personal-info
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

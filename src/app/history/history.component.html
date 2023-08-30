@@ -1,5 +1,313 @@
 <app-navbar></app-navbar>
-<div>
-    <p>History page</p>
+<div class="history">
+    <div class="history-header">
+        <h1>Trade history</h1>
+        <p>View your trades and transactions</p>
+    </div>
+    <div class="history-section">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="All trades" class="mat_tab_ne">
+                <div class="history-section-function">
+                    <div class="history-section-function-search">
+                        <mat-icon>search</mat-icon>
+                        <input class="history-search-input" placeholder="Search items, category" />
+                    </div>
+                    <div class="history-section-function-filter">
+                        <mat-icon>filter_list</mat-icon>
+                    </div>
+                </div>
+                <!-- css form pop bckgr -->
+                <div class="history-section-transaction">
+                    <!-- <div class="history-section-transaction-header">
+                        <p>Trade</p>
+                        <p>Amount</p>
+                        <p>Unit</p>
+                        <p>Price</p>
+                        <p>Date</p>
+                        <p>Status</p>
+                    </div> -->
+                    <table class="history-section-transaction-table">
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <thead>
+                            <tr class="history-table-header">
+                                <th><span style="float: left;">Trade</span>
+                                <th><span style="float: left;">Amount</span>
+                                <th><span style="float: left;">Unit</span>
+                                <th><span style="float: left;">Price</span>
+                                <th><span style="float: left;">Date</span>
+                                <th><span style="float: left;">Status</span>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="history-trade">
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td class="history-amount">$2,000.83</td>
+                                <td class="history-unit">3,5</td>
+                                <td class="history-price">$881.50</td>
+                                <td class="history-date">Jan 13, 2023</td>
+                                <td class="history-status">Success</td>
+                            </tr>
+                            <!-- More rows here -->
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td class="history-processing">Processing</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td class="history-fail">Fail</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                        </tbody>
+                    </table>
+<!-- put in later
+                    <div class = "history-section-transaction-navigator">
+                        <div class = "history-prev-btn">
+                            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_back_ios_new </span>
+                            <p>Previous</p>
+                        </div>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <div class = "history-next-btn">
+                            <p>Next</p>
+                            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_forward_ios </span>
+                        </div>
+                    </div> -->
+
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Buy">
+                <div class="history-section-function">
+                    <div class="history-section-function-search">
+                        <mat-icon>search</mat-icon>
+                        <input class="history-search-input" placeholder="Search items, category" />
+                    </div>
+                    <div class="history-section-function-filter">
+                        <mat-icon>filter_list</mat-icon>
+                    </div>
+                </div>
+                <!-- css form pop bckgr -->
+                <div class="history-section-transaction">
+                    <!-- <div class="history-section-transaction-header">
+                        <p>Trade</p>
+                        <p>Amount</p>
+                        <p>Unit</p>
+                        <p>Price</p>
+                        <p>Date</p>
+                        <p>Status</p>
+                    </div> -->
+                    <table class="history-section-transaction-table">
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <thead>
+                            <tr class="history-table-header">
+                                <th><span style="float: left;">Trade</span>
+                                <th><span style="float: left;">Amount</span>
+                                <th><span style="float: left;">Unit</span>
+                                <th><span style="float: left;">Price</span>
+                                <th><span style="float: left;">Date</span>
+                                <th><span style="float: left;">Status</span>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="history-trade">
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td class="history-amount">$2,000.83</td>
+                                <td class="history-unit">3,5</td>
+                                <td class="history-price">$881.50</td>
+                                <td class="history-date">Jan 13, 2023</td>
+                                <td class="history-status">Success</td>
+                            </tr>
+                            <!-- More rows here -->
+                            
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td class="history-fail">Fail</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+            </mat-tab>
+
+            <mat-tab label="Sell">
+                <div class="history-section-function">
+                    <div class="history-section-function-search">
+                        <mat-icon>search</mat-icon>
+                        <input class="history-search-input" placeholder="Search items, category" />
+                    </div>
+                    <div class="history-section-function-filter">
+                        <mat-icon>filter_list</mat-icon>
+                    </div>
+                </div>
+                <!-- css form pop bckgr -->
+                <div class="history-section-transaction">
+                    <!-- <div class="history-section-transaction-header">
+                        <p>Trade</p>
+                        <p>Amount</p>
+                        <p>Unit</p>
+                        <p>Price</p>
+                        <p>Date</p>
+                        <p>Status</p>
+                    </div> -->
+                    <table class="history-section-transaction-table">
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <colgroup></colgroup>
+                        <thead>
+                            <tr class="history-table-header">
+                                <th><span style="float: left;">Trade</span>
+                                <th><span style="float: left;">Amount</span>
+                                <th><span style="float: left;">Unit</span>
+                                <th><span style="float: left;">Price</span>
+                                <th><span style="float: left;">Date</span>
+                                <th><span style="float: left;">Status</span>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="history-trade">
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td class="history-amount">$2,000.83</td>
+                                <td class="history-unit">3,5</td>
+                                <td class="history-price">$881.50</td>
+                                <td class="history-date">Jan 13, 2023</td>
+                                <td class="history-status">Success</td>
+                            </tr>
+                            <!-- More rows here -->
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets\img\tether_logo.jpg" width=20px>
+                                    Tether Inc.
+                                </td>
+                                <td>$2,000.83</td>
+                                <td>3,5</td>
+                                <td>$881.50</td>
+                                <td>Jan 13, 2023</td>
+                                <td>Success</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </div>
 <app-footer></app-footer>
