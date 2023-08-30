@@ -33,7 +33,7 @@
         justify-content: left;
         align-items: center;
         width: 50%;
-        height: auto;
+        height: 70%;
         border-radius: 10px;
         /*padding: 10px;*/
         margin: 10px;
@@ -42,6 +42,7 @@
     .navbar-search mat-icon, .navbar-personal mat-icon, .navbar a {
         padding: 10px;
         color: white;
+        height: 50%;
     }
 
     .navbar-search-input {
@@ -50,11 +51,23 @@
         border: none;
     }
 
+    .test {
+        display: flex;
+        flex-direction: row;
+        margin: 8px;
+    }
+
     .navbar-personal, .navbar-history {
         align-items: center;
-        margin: 10px;
         background: rgba(27, 228, 228, 0.3);
-        border-radius: 10px;
+    }
+
+    .navbar-personal { 
+        border-radius: 0 10px 10px 0;
+    }
+
+    .navbar-history {
+        border-radius: 10px 0 0 10px;
     }
 
     .navbar-history{
