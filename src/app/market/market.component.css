@@ -1,8 +1,4 @@
 @media (min-width: 480px) {
-    /*mat-grid-tile {
-        background: lightblue;
-    }
-    */
     .marketPlace {
         /*must-have*/
         background-image: url("src/assets/img/bckgr.jpg");
@@ -28,31 +24,15 @@
 
     .market-filter {
         width: 50%;
-        /* float: right; */
     }
 
     .market-filter mat-icon {
         float: right;
     }
-
-    /* .marketPlace-body {
-        margin-left: 5%;
-    } */
     
     img {
         border-radius: 10% 10% 0 0;
     }
-
-    /* .marketPlace-body-product-info {
-        display: flex;
-        flex-direction: row;
-        gap: 5rem;
-
-    }
-
-    .marketPlace-body-product-info1, .marketPlace-body-product-info2 { 
-        width: 50%;
-    } */
 
     .mobile-marketPlace {
         display: none;
@@ -72,13 +52,6 @@
         color: white;
         font-size: 1vw;
     }
-
-    /* .marketPlace-body-product-box {
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        height: 80%;
-    } */
 
     .market-navigator {
         display: flex;

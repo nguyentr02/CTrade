@@ -5,8 +5,11 @@
         <p>View your trades and transactions</p>
     </div>
     <div class="history-section">
-        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-            <mat-tab label="All trades" class="mat_tab_ne">
+        <mat-tab-group (selectedTabChange)="onTabChange($event)" mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <span [ngClass]="{'my-custom-class': activeTabIndex === 0, 'active-tab-label': activeTabIndex === 0}">All trades</span>
+                </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
                         <mat-icon>search</mat-icon>
@@ -18,24 +21,10 @@
                 </div>
                 <!-- css form pop bckgr -->
                 <div class="history-section-transaction">
-                    <!-- <div class="history-section-transaction-header">
-                        <p>Trade</p>
-                        <p>Amount</p>
-                        <p>Unit</p>
-                        <p>Price</p>
-                        <p>Date</p>
-                        <p>Status</p>
-                    </div> -->
                     <table class="history-section-transaction-table">
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
                         <thead>
                             <tr class="history-table-header">
-                                <th><span style="float: left;">Trade</span>
+                                <th><span style="float: left; width: 35%;">Trade</span>
                                 <th><span style="float: left;">Amount</span>
                                 <th><span style="float: left;">Unit</span>
                                 <th><span style="float: left;">Price</span>
@@ -44,7 +33,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr style="color:white;">
                                 <td class="history-trade">
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -56,7 +45,7 @@
                                 <td class="history-status">Success</td>
                             </tr>
                             <!-- More rows here -->
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -67,7 +56,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td>Success</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -78,7 +67,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td>Success</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -89,7 +78,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td class="history-processing">Processing</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -100,7 +89,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td>Success</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -111,7 +100,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td class="history-fail">Fail</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -124,25 +113,13 @@
                             </tr>
                         </tbody>
                     </table>
-<!-- put in later
-                    <div class = "history-section-transaction-navigator">
-                        <div class = "history-prev-btn">
-                            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_back_ios_new </span>
-                            <p>Previous</p>
-                        </div>
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
-                        <div class = "history-next-btn">
-                            <p>Next</p>
-                            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_forward_ios </span>
-                        </div>
-                    </div> -->
-
                 </div>
             </mat-tab>
 
-            <mat-tab label="Buy">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <span [ngClass]="{'my-custom-class': activeTabIndex === 1, 'active-tab-label': activeTabIndex === 1}">Buy</span>
+                </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
                         <mat-icon>search</mat-icon>
@@ -154,21 +131,7 @@
                 </div>
                 <!-- css form pop bckgr -->
                 <div class="history-section-transaction">
-                    <!-- <div class="history-section-transaction-header">
-                        <p>Trade</p>
-                        <p>Amount</p>
-                        <p>Unit</p>
-                        <p>Price</p>
-                        <p>Date</p>
-                        <p>Status</p>
-                    </div> -->
                     <table class="history-section-transaction-table">
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
                         <thead>
                             <tr class="history-table-header">
                                 <th><span style="float: left;">Trade</span>
@@ -180,7 +143,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr style="color:white;">
                                 <td class="history-trade">
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -193,7 +156,7 @@
                             </tr>
                             <!-- More rows here -->
                             
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -204,7 +167,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td>Success</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -215,7 +178,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td class="history-fail">Fail</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -231,7 +194,10 @@
                 </div>    
             </mat-tab>
 
-            <mat-tab label="Sell">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <span [ngClass]="{'my-custom-class': activeTabIndex === 2, 'active-tab-label': activeTabIndex === 2}">Sell</span>
+                </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
                         <mat-icon>search</mat-icon>
@@ -243,21 +209,7 @@
                 </div>
                 <!-- css form pop bckgr -->
                 <div class="history-section-transaction">
-                    <!-- <div class="history-section-transaction-header">
-                        <p>Trade</p>
-                        <p>Amount</p>
-                        <p>Unit</p>
-                        <p>Price</p>
-                        <p>Date</p>
-                        <p>Status</p>
-                    </div> -->
                     <table class="history-section-transaction-table">
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
-                        <colgroup></colgroup>
                         <thead>
                             <tr class="history-table-header">
                                 <th><span style="float: left;">Trade</span>
@@ -269,7 +221,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr style="color:white;">
                                 <td class="history-trade">
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -281,7 +233,7 @@
                                 <td class="history-status">Success</td>
                             </tr>
                             <!-- More rows here -->
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -292,7 +244,7 @@
                                 <td>Jan 13, 2023</td>
                                 <td>Success</td>
                             </tr>
-                            <tr>
+                            <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
                                     Tether Inc.
@@ -301,7 +253,7 @@
                                 <td>3,5</td>
                                 <td>$881.50</td>
                                 <td>Jan 13, 2023</td>
-                                <td>Success</td>
+                                <td class="history-processing">Processing</td>
                             </tr>
                         </tbody>
                     </table>

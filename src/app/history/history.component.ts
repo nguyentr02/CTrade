@@ -8,5 +8,9 @@ import {MatTabsModule} from '@angular/material/tabs';
   encapsulation: ViewEncapsulation.None
 })
 export class HistoryComponent {
+  activeTabIndex = 0; // Default active tab index
 
+  onTabChange(event: any) {
+    this.activeTabIndex = event.index;
+  }
 }

@@ -1,36 +1,59 @@
-/* test */
+/* layout */
 .history {
-    margin-top: 2%;
-    margin-bottom: 8%;
-    height: 90%;
+    
+    background-color: black;
+    padding: 2% 5% 5% 5%;
 }
 
 .history-header {
-    width: 50%;
-    height: 20%;
+    /* width: 50%;
+    height: 20%; */
     padding: 1%;
-    margin-left: 25%;
+    /* margin-left: 25%; */
 }
 
 .history-section {
-    width: 50%;
-    height: 80%;
+    /* width: 50%;
+    height: 80%; */
     padding: 1%;
-    margin-left: 25%;
-    background-color: lightgrey;
+    /* margin-left: 25%; */
+    background-color: black;
     border-radius: 10px;
     border: 1px solid;
-    filter: drop-shadow(10px 20px 50px var(--shadow-color));
-    --shadow-color: hsla(165, 100%, 40%, 0.9);
+    /* filter: drop-shadow(-5px 20px 50px var(--shadow-color));
+    --shadow-color: hsla(165, 100%, 20%, 0.9); */
+    box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
+    -webkit-box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
+    -moz-box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
 }
-/* mat-tab */
+/* text */
+.history-header h1, .history-table-header th {
+    color: #00CC99;
+}
+
+.history-header p {
+    color: white;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+    color: white !important;
+}
+
+.active-tab-label {
+    color: #00CC99;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+}
 
 
 /* section-function */
 .history-section-function-search {
     display: flex;
     flex-direction: row;
-    background: rgba(27, 228, 228, 0.3);    
+    background: rgba(60, 186, 186, 0.449);    
     justify-content: left;
     align-items: center;
     width: 20%;
@@ -38,12 +61,12 @@
     border-radius: 10px;
     /*padding: 10px;*/
     margin: 10px;
-    padding-left: 2%;
+    padding: 10px;
 }
 
 .history-section-function-search mat-icon {
     /* padding: 10px; */
-    color: white;
+    color: #00CC99;
     height: 50%;
 }
 
@@ -59,13 +82,22 @@
 
 .history-section-function-filter mat-icon {
     float: right;
-    color: teal;
+    color: #00CC99;
+    margin: 1% 2% 0 0;
 }
 
-/*  */
+/*  table */
+.history-section-transaction-table {
+    margin-left: 1%;
+}
 .history-section-function {
     display: flex;
     flex-direction: row;
+}
+
+.history-section-transaction {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .history-section-transaction-header {
@@ -74,12 +106,13 @@
     column-gap: 5%;
 }
 
-.history-table-header th {
-    color: teal;
+table {
+    width: 100%;
 }
 
 .history-trade {
-    padding-right: 10vw !important;
+    /* padding-right: 10vw !important; */
+    width: 35%;
 }
 
 .history-amount, .history-unit, .history-price, .history-date,.history-status {
@@ -90,25 +123,6 @@ th, td {
     padding-bottom: 2vw;
 }
 
-/* .history-section-transaction-navigator {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    padding-bottom: 4%;
-    padding-top: 4%;
-}
-
-.history-prev-btn, .history-next-btn {
-    display: flex;
-    flex-direction: row;
-    background-color: #00CC99;
-    padding: 1% 1% 0.5% 1%;
-}
-
-.history-section-transaction-navigator p {
-    color: white;
-} */
 
 /* status condition */
 .history-fail {
