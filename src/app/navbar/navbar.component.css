@@ -9,35 +9,31 @@
     }
 
     .navbar {
+        padding: 10px;
         width: 100%;
         background-color: black;
-        height: 10%;
+        height: 60px;
         display: flex;
         flex-direction: row;
         box-sizing: border-box;
         padding: 5px;
         justify-content: space-between;
+        align-items: center;
     }
 
     .navbar-logo {
-        width: auto;
-        height: auto;
-        margin-left: 5%;
-        margin: 1%;
+        width: 30px;
+        height: 30px;
+        padding-left: 1%;
     }
 
-    .navbar-search {
+    .navbar-history, .navbar-personal {
         display: flex;
         flex-direction: row;
-        background: rgba(27, 228, 228, 0.3);    
-        justify-content: left;
+        background: rgba(27, 228, 228, 0.3);
+        justify-content: center;
         align-items: center;
-        width: 50%;
-        height: 70%;
         border-radius: 10px;
-        /*padding: 10px;*/
-        margin: 10px;
-        padding-left: 2%;
     }
 
     .navbar-search mat-icon, .navbar-personal mat-icon, .navbar a {
@@ -47,41 +43,38 @@
     }
 
     .navbar-search-input {
-        width: 70%;
+        width: 50%;
         background-color: rgba(124, 124, 124, 0);
         border: none;
     }
 
-    .navbar_test {
+    .navbar-search {
         display: flex;
         flex-direction: row;
-        margin: 8px;
-    }
-
-    .navbar-personal, .navbar-history {
-        align-items: center;
         background: rgba(27, 228, 228, 0.3);
+        justify-content: left;
+        /* padding-left: 24px; */
+        padding: 10px;
+        align-items: center;
+        border-radius: 10px;
+        width: 50%;
     }
 
-    .navbar-personal { 
-        border-radius: 0 10px 10px 0;
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        column-gap: 10px;
     }
 
-    .navbar-history {
-        border-radius: 10px 0 0 10px;
-    }
-
-    .navbar-history{
+    .navbar-personal {
         padding: 10px;
     }
 
-    .navbar-personal mat-icon {
-        height: 50%;
-        margin-top: 25%;
+    .navbar-history {
+        padding: 10px;
     }
-    /* .test-transparent-bckgr{
-        color: black;
-    } */
 }
 
 @media only screen and (max-width: 480px) {
