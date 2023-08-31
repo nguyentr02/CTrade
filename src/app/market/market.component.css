@@ -9,10 +9,11 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding: 0 5% 0 5%;
     }
 
     .marketPlace-header {
-        padding: 5% 5% 0 5%;
+        padding: 5% 0 0 0;
         display: flex;
         flex-direction: row;
     }
@@ -34,18 +35,15 @@
         float: right;
     }
 
+    /* .marketPlace-body {
+        margin-left: 5%;
+    } */
+    
     img {
         border-radius: 10% 10% 0 0;
     }
 
-    .marketPlace-body-product-infoBox {
-        background-color: black;
-        border-radius: 0 0 12% 12%;
-        padding: 10%;
-        margin-top: -3%;
-    }
-
-    .marketPlace-body-product-info {
+    /* .marketPlace-body-product-info {
         display: flex;
         flex-direction: row;
         gap: 5rem;
@@ -54,7 +52,7 @@
 
     .marketPlace-body-product-info1, .marketPlace-body-product-info2 { 
         width: 50%;
-    }
+    } */
 
     .mobile-marketPlace {
         display: none;
@@ -75,12 +73,12 @@
         font-size: 1vw;
     }
 
-    .marketPlace-body-product-box {
+    /* .marketPlace-body-product-box {
         justify-content: center;
         align-items: center;
         width: 70%;
         height: 80%;
-    }
+    } */
 
     .market-navigator {
         display: flex;

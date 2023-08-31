@@ -7,6 +7,7 @@ import { MarketComponent } from './market/market.component';
 import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './history/history.component';
 import { PersonalInfomationComponent} from './personal-infomation/personal-infomation.component';
+import { CoinCardComponent } from './coin-card/coin-card.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent,pathMatch:'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'nav', component: NavbarComponent},
   {path:'footer', component: FooterComponent},
   {path:'history', component: HistoryComponent},
-  {path:'personal-info', component: PersonalInfomationComponent}
+  {path:'personal-info', component: PersonalInfomationComponent},
+  {path: 'test', component: CoinCardComponent}
 ];
 
 @NgModule({

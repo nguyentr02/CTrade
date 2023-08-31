@@ -24,6 +24,7 @@ import { MarketComponent } from './market/market.component';
 import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './history/history.component';
 import { PersonalInfomationComponent } from './personal-infomation/personal-infomation.component';
+import { CoinCardComponent } from './coin-card/coin-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PersonalInfomationComponent } from './personal-infomation/personal-info
     MarketComponent,
     FooterComponent,
     HistoryComponent,
-    PersonalInfomationComponent
+    PersonalInfomationComponent,
+    CoinCardComponent
   ],
   imports: [
     BrowserModule,
