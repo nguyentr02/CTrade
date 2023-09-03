@@ -62,7 +62,7 @@
     margin: 5% 0% 5% 0%;
 }
 
-.register-section-container-nameFields {
+.register-section-container-nameFields, .register-section-container-pwdFields, .register-section-container-confirmPwdSection {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -73,7 +73,7 @@
     margin-bottom: 1px;
 }
 
-.register-section-container-firstNameSection {
+.register-section-container-firstNameSection, .register-section-container-pwdSection, .register-section-container-resetPwdSection {
     width: 50%;
 }
       
@@ -124,11 +124,11 @@
 }
   
 .register-section-container-passwordField {
-    width: 95%;
+    width: 90%;
 }
   
 .register-section-container-passwordField input {
-    width: 100%;
+    width: 90%;
 }
   
 .register-section-container-passwordField mat-error {

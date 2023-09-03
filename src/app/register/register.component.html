@@ -38,13 +38,27 @@
                 <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
             </mat-form-field>
 
-            <p>Password</p>
-            <mat-form-field class="register-section-container-passwordField" appearance="outline">
-                <input class="register-passwordInput" type="password" matInput placeholder="Enter your password"
-                    [formControl]="password" required>
-                <!-- Display error and verify password using function-->
-                <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
-            </mat-form-field>
+            <div class="register-section-container-pwdFields">
+                <div class="register-section-container-pwdSection">
+                    <p>Password</p>
+                    <mat-form-field class="register-section-container-passwordField" appearance="outline">
+                        <input class="register-passwordInput" type="password" matInput placeholder="Enter your password"
+                            [formControl]="password" required>
+                        <!-- Display error and verify password using function-->
+                        <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="register-section-container-confirmPwdSection">
+                    <p>Confirm Password</p>
+                    <mat-form-field class="register-section-container-passwordField" appearance="outline">
+                        <input class="register-passwordInput" type="password" matInput placeholder="Re-Enter your password"
+                            [formControl]="password" required>
+                        <!-- Display error and verify password using function-->
+                        <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
         </div>
 
         <!-- Temporary go directly to main page, when move to stage 2 and imply BE, need to be change -->
