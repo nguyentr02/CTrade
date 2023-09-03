@@ -100,6 +100,39 @@
     h3 {
         font-weight: bold;
     }
+
+    .pInfo-signout {
+        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end ;
+    }
+
+    /* coloring */
+    .pInfo {
+        background-color: black;
+        padding: 0% 5%;
+    }
+
+    h1, h2, h3 {
+        color: #00CC99;
+    }
+
+    button {
+        background-color: #00CC99 !important;
+    }
+
+    p, mat-icon {
+        color: white;
+    }
+
+    .pInfo-bioSection {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .pInfo-nameSection-firstName, .pInfo-nameSection-givenName {
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 960px) {

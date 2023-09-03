@@ -14,9 +14,9 @@
     background-color: black;
     border-radius: 10px;
     border: 1px solid;
-    box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
-    -webkit-box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
-    -moz-box-shadow: -1px 0px 49px -5px hsla(165, 100%, 20%, 0.9);
+    box-shadow: -1px 0px 49px -5px rgba(28,167,99,0.75);
+    -webkit-box-shadow: -1px 0px 49px -5px rgba(28,167,99,0.75);
+    -moz-box-shadow: -1px 0px 49px -5px rgba(28,167,99,0.75);
 }
 /* text */
 .history-header h1, .history-table-header th {
