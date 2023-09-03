@@ -46,6 +46,12 @@
         width: 50%;
         background-color: rgba(124, 124, 124, 0);
         border: none;
+        margin-left: 10px;
+        color: white;
+    }
+
+    .navbar-search-input:focus {
+        outline: none;
     }
 
     .navbar-search {
