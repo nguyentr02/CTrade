@@ -54,15 +54,27 @@
 }
   
 .register-section-container-function {
-    max-height: 30vh; /* Adjust the maximum height as needed */
-    overflow-y: auto;
+    /*
+    max-height: 30vh; 
+    overflow-y: auto; */
     width: 100%;
 
-    margin: 10% 0% 10% 0%;
+    margin: 5% 0% 5% 0%;
+}
+
+.register-section-container-nameFields {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0 5% 0;
 }
   
 .register-section-container-function p {
     margin-bottom: 1px;
+}
+
+.register-section-container-firstNameSection {
+    width: 50%;
 }
       
 .register-section-container-firstNameField {
@@ -96,11 +108,11 @@
 }
  
 .register-section-container-emailField {
-    width: 90%;
+    width: 95%;
 }
   
 .register-section-container-emailField input {
-    width: 90%;
+    width: 100%;
     border-color: white;
 }
   
@@ -112,11 +124,11 @@
 }
   
 .register-section-container-passwordField {
-    width: 90%;
+    width: 95%;
 }
   
 .register-section-container-passwordField input {
-    width: 90%;
+    width: 100%;
 }
   
 .register-section-container-passwordField mat-error {
@@ -195,11 +207,11 @@ a {
     }
 
     .register-section-container {
-        width: 25%;
+        width: 40%;
         position: absolute;
         transform: translate(-50%, -50%, -50%, -50%);
         padding: 5%;
-        margin: 5% 37.5% 0% 33%;
+        margin: 3% 0 5% 25%;
         background-color: black;
         border-radius: 5%;
         border: 1px solid;
