@@ -12,6 +12,7 @@
     }
 
     .pInfo-buttons-text {
+        text-align: left;
         font-size: 2vh;
         margin: 0% 1% 0% 20%;
     }
