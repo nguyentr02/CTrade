@@ -5,6 +5,11 @@
     height: 100%;
 }
 
+.register-section a {
+    color: white;
+    text-decoration: none;
+}
+
 .register-section-backgroundImage {        
     position: relative;
     width: 100%;
@@ -23,6 +28,11 @@
 .register-button {
     width: 100%;
     margin-bottom: 2%;
+    background-color: teal !important;
+}
+
+.register-emailInput, .register-passwordInput, .register-firstNameInput {
+    color: white !important;
 }
   
 .register-section-container {

@@ -24,9 +24,14 @@ img {
     padding: 1% 5%;
 }
 
+.sub-header {
+    color: #292D32;
+}
+
 .info {
     color:white;
 }
+
 
 .sub-header, .info {
     width: 5%;

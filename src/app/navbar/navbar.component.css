@@ -81,6 +81,10 @@
     .navbar-history {
         padding: 10px;
     }
+
+    .navbar-history a {
+        text-decoration: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
