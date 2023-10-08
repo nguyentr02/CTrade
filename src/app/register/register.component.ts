@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
     selector: 'app-register',
@@ -8,7 +10,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
     styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-    constructor(private router: Router) {
+    constructor(private router: Router, private http: HttpClient) {
 
     }
 
@@ -41,7 +43,22 @@ export class RegisterComponent implements OnInit {
         return this.email.hasError('email') ? 'Not a valid email' : '';
     }
 
+    // Adding details to database
     verifyAccount() {
+        let data = {
+            "fName" : this.firstName,
+            "lName" : this.givenName,
+            "email" : this.email,
+            "pwd" : this.password
+        }
+
+        // Check if email is already exist in Dtb
+        // this.http.get("")
+
+        // this.http.post(environment.WSURL + "/users/signup", data).subscribe((result:any) => {
+        //     console.log("SignUp data: ",data);
+
+        // })
         this.router.navigate(['/market']);
     }
 

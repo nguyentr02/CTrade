@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './history/history.component';
 import { PersonalInfomationComponent } from './personal-infomation/personal-infomation.component';
 import { CoinCardComponent } from './coin-card/coin-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CoinCardComponent } from './coin-card/coin-card.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
@@ -50,7 +52,8 @@ import { CoinCardComponent } from './coin-card/coin-card.component';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
