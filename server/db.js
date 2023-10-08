@@ -1,8 +1,8 @@
 const mysql = require("mysql");
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
 const server = express();
-server.use(bodyParser.json());
+server.use(express.json());
+// This line enables JSON body parsing
 
 // Create connection to MySQL
 var db = mysql.createConnection({
@@ -31,65 +31,74 @@ server.listen(8080, function check(err) {
   }
 });
 
-// View data in User Table
+// ---------- View data in User Table - checked ----------
 server.get("/users/all", (req, res) => {
   var sql = "SELECT * FROM ContractUser";
   db.query(sql, function (err, result) {
     if (err) {
-      console.log("Cannot connect to Database");
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot connect to Database" });
     } else {
       res.send({ status: true, data: result });
     }
   });
 });
 
-// Search Email in User Table
+//--------- Search Email in User Table - checked ----------
 server.get("/users/getEmail/:email", (req, res) => {
   var userEmail = req.params.email;
-  var sql = "SELECT * FROM ContractUser WHERE UserEmail =" + userEmail;
-  db.query(sql, function (err, result) {
+  var sql = "SELECT * FROM ContractUser WHERE UserEmail = ?";
+  db.query(sql,[userEmail], function (err, result) {
     if (err) {
-      console.log("Cannot connect to Database");
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot find the user's email" });
     } else {
       res.send({ status: true, data: result });
     }
   });
 });
 
+// ------- Test insert user signup into db - checked ---------
 server.post("/users/signUp", (req, res) => {
   let detail = {
-    UserEmail: req.body.email,
-    // pwd: req.body.password,
+    UserName: req.body.userName,
+    pwd: req.body.password,
     FirstName: req.body.fName,
     LastName: req.body.lName,
-    UserName: req.body.userName,
+    UserEmail: req.body.userEmail
   };
+  
+  // let sql = "INSERT INTO ContractUser SET ?";
+  // db.query(sql, detail, function (err) {
+  // CANNOT use like this because SET is used for UPDATE only not INSERT
 
-  let sql = "INSERT INTO ContractUser SET ?";
-  db.query(sql, detail, function (err) {
-    if (err) {
-      res.send({ status: false, message: "Cannot add user" });
+let sql = "INSERT INTO ContractUser (UserName, pwd, FirstName, LastName, UserEmail) VALUES (?, ?, ?, ?, ?)";
+db.query(sql, [detail.UserName, detail.pwd, detail.FirstName, detail.LastName, detail.UserEmail], function (err) {
+  //for testing the details, can be removed later
+  console.log("Received request body:", req.body);  
+  if (err) {
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot add user details" });
     } else {
       res.send({ status: true, message: "Added" });
     }
   });
 });
 
-
+// ------------ Test add product - checked -------------
 server.post("/products/add", (req, res) => {
   let detail = {
     ProdName: req.body.name,
-    // pwd: req.body.password,
     ProdPrice: req.body.price,
     ProdQty: req.body.qty,
     ProdImage: req.body.img,
   };
 
-  let sql = "INSERT INTO ContractProduct SET ?";
-  db.query(sql, detail, function (err) {
+  let sql = "INSERT INTO ContractProduct (ProdName, ProdPrice, ProdQty, ProdImage) VALUES (?, ?, ?, ?)";
+  db.query(sql, [detail.ProdName, detail.ProdPrice, detail.ProdQty, detail.ProdImage], function (err) {
     if (err) {
-      res.send({ status: false, message: "Cannot add product" });
-      throw err;
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot add product details" });
     } else {
       res.send({ status: true, message: "Added" });
     }
