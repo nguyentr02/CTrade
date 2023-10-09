@@ -3,23 +3,22 @@ import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class SignUpService {
+export class ProductService {
 
-  constructor( private http:HttpClient) { }
-
-  async searchEmail(email : string) {
+  constructor(private http:HttpClient) { }
+  async getAllProducts() {
     let result = await lastValueFrom(
-      this.http.get<any>(environment.WSURL + "/users/getEmail/" + email)
+      this.http.get<any>(environment.WSURL + '/products/all')
     );
 
     if (!result.result) {
       throw Error(result.error);
-    }
+    };
+
     console.log(result);
-    return result.emails;
+    return result.result;
   }
 }

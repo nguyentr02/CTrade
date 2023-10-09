@@ -30,6 +30,13 @@ server.listen(8080, function check(err) {
     console.log("Successed");
   }
 });
+// Fixing CORS
+server.use((req,res,next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+// ----------------------------------------------------------------------------------------------------------------
 
 // ---------- View data in User Table - checked ----------
 server.get("/users/all", (req, res) => {
@@ -101,6 +108,19 @@ server.post("/products/add", (req, res) => {
       res.status(500).send({ status: false, error: "Cannot add product details" });
     } else {
       res.send({ status: true, message: "Added" });
+    }
+  });
+});
+
+// Get All data from Product table
+server.get("/products/all", (req, res) => {
+  var sql = "SELECT * FROM ContractProduct";
+  db.query(sql, function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot connect to Database" });
+    } else {
+      res.json({ status: true, result });
     }
   });
 });

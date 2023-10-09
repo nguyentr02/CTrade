@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  WSURL: "https://localhost:8080",
+  WSURL: "http://localhost:8080",
 };

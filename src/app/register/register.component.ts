@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.development';
 
 @Component({
     selector: 'app-register',
@@ -59,6 +58,8 @@ export class RegisterComponent implements OnInit {
         //     console.log("SignUp data: ",data);
 
         // })
+
+
         this.router.navigate(['/market']);
     }
 
