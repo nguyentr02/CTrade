@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgIf} from '@angular/common';
+import { UserService } from '../services/user.service';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -14,7 +15,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class LoginComponent implements OnInit {
   
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private userService: UserService
+    ) {
 
   }
 
@@ -28,8 +32,42 @@ export class LoginComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  verifyAccount() {
-    this.router.navigate(['/market']);
+  user: any;
+  emailData: any;
+  async verifyAccount(userEmail:any,userPassword: any) {
+    // this.router.navigate(['/market']);
+
+
+    // Only proceed when type in valid email and password
+    if ((this.email.value != "") && (this.password.value != "")) {
+      if ((this.email.valid) && (this.password.valid)) {
+        try {
+          this.emailData = await this.userService.searchEmail(userEmail.value);
+          console.log(this.user);
+        } catch (error) {
+          console.log(error);
+        }
+        // console.log(this.emailData.length);
+        if (this.emailData.length == 0) {
+          console.log("Cannot find account");
+        } else {
+          try {
+            this.user = await this.userService.checkPassword(userEmail.value,userPassword.value);
+          } catch (error) {
+            console.log(error);
+          }
+          // console.log(this.user);
+          if (this.user.length == 0) {
+            console.log("Wrong Password");
+          } else {
+            // Correct email and password
+            console.log("Correct!!!")
+            this.router.navigate(['/market']);
+          }
+        }
+      }
+    }
+
   }
   getErrorPasswordMessage() {
     if (this.email.hasError('required')) {

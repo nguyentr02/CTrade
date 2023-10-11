@@ -65,6 +65,23 @@ server.get("/users/getEmail/:email", (req, res) => {
   });
 });
 
+//--------- Search Email,Password in User Table - checked ----------
+server.get("/users/checkPassword/:email/:password", (req, res) => {
+  var userEmail = req.params.email;
+  var userPassword = req.params.password;
+  var detail = [userEmail,userPassword];
+  // res.json(detail)
+  var sql = "SELECT * FROM ContractUser WHERE UserEmail = ? AND pwd = ?";
+  db.query(sql,detail, function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res.status(500).send({ status: false, error: "Cannot find the user's email" });
+    } else {
+      res.send({ status: true, data: result });
+    }
+  });
+}); 
+
 // ------- Test insert user signup into db - checked ---------
 server.post("/users/signUp", (req, res) => {
   let detail = {
