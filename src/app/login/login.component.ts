@@ -49,7 +49,8 @@ export class LoginComponent implements OnInit {
         }
         // console.log(this.emailData.length);
         if (this.emailData.length == 0) {
-          console.log("Cannot find account");
+          window.alert("Cannot find account");
+          // console.log("Cannot find account");
         } else {
           try {
             this.user = await this.userService.checkPassword(userEmail.value,userPassword.value);
@@ -58,7 +59,8 @@ export class LoginComponent implements OnInit {
           }
           // console.log(this.user);
           if (this.user.length == 0) {
-            console.log("Wrong Password");
+            window.alert("Wrong Password");
+            // console.log("Wrong Password");
           } else {
             // Correct email and password
             console.log("Correct!!!")

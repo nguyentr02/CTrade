@@ -23,9 +23,11 @@ export class UserService {
     return result.data;
   }
 
-  async checkPassword(email:string,pwd:String) {
+  async checkPassword(email: string, pwd: String) {
     let result = await lastValueFrom(
-      this.http.get<any>(environment.WSURL+ '/users/checkPassword/' + email + "/" + pwd)
+      this.http.get<any>(
+        environment.WSURL + '/users/checkPassword/' + email + '/' + pwd
+      )
     );
 
     // if (!result.result) {
@@ -35,6 +37,27 @@ export class UserService {
     return result.data;
   }
 
+  async addUser(
+    userEmail: string,
+    password: string,
+    userName: string,
+    fName: string,
+    lName: string
+  ) {
+    let result = await lastValueFrom(
+      this.http.post<any>(environment.WSURL + '/users/signUp', {
+        userName,
+        password,
+        fName,
+        lName,
+        userEmail,
+      })
+    );
 
-  
+    if (!result.result) {
+      throw Error(result.error);
+    }
+    console.log(result.data);
+    return result.data;
+  }
 }
