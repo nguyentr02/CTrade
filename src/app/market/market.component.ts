@@ -24,4 +24,27 @@ export class MarketComponent {
       console.log(error);
     }
   }
+
+  filter_status = 1;
+  async filter() {
+    // If filter_status = 4 then show all product which is no filter
+    if (this.filter_status == 4) {
+      try {
+        this.products = await this.productService.getAllProducts();
+        console.log(this.products);
+      } catch (error) {
+        console.log(error);
+      }
+      // After get Data, move back to 1 so next click show category 1
+      this.filter_status = 1;
+    } else {
+      try {
+        this.products = await this.productService.getProducts(this.filter_status);
+      } catch (error) {
+        console.log(error);
+      }
+      // Increase filter_status so that next click show next category
+      this.filter_status = this.filter_status + 1;
+    }
+  }
 }

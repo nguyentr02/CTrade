@@ -5,35 +5,15 @@
         <div class="market-filter-title">
             <p>MARKET PLACE</p>
         </div>
+        <!-- Filter by Category -->
         <div class="market-filter">
-            <mat-icon>filter_list</mat-icon>
+            <mat-icon (click)="filter()">filter_list</mat-icon>
         </div> 
     </div>
     <mat-grid-list cols="4" rowHeight="1:1.5" gutterSize="50" class="marketPlace-body">
         <mat-grid-tile class="marketPlace-body-product" *ngFor="let product of products">
             <coin-card [items]="product"></coin-card>
         </mat-grid-tile>
-        <!-- <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>        
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile>
-        <mat-grid-tile class="marketPlace-body-product">
-            <coin-card></coin-card>
-        </mat-grid-tile> -->
     </mat-grid-list>
     
     <div class = "market-navigator">
