@@ -21,7 +21,7 @@ export class MarketComponent {
     search?: string;
     async reloadPage($event) {
       this.search = $event;
-      console.log("SEARCH");
+      console.log("SEARCH NE");
       try {
         this.products = await this.productService.getProductsByName(this.search);
         console.log(this.products);
@@ -33,7 +33,7 @@ export class MarketComponent {
   // ______________________________________
 
   async ngOnInit(): Promise<void> {
-    
+
     // Get Data to Render products on Market page
     try {
       this.products = await this.productService.getAllProducts();
