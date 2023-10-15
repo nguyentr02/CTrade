@@ -52,6 +52,8 @@ export class DialogComponent {
       } catch (error) {
         console.log(error);
       }
+
+      this.dialog.closeAll();
     } else {
       window.alert('Wrong input Format');
     }
@@ -73,6 +75,8 @@ export class DialogComponent {
       } catch (error) {
         console.log(error);
       }
+
+      this.dialog.closeAll();
     } else {
       window.alert('Wrong input Format');
     }
@@ -82,8 +86,4 @@ export class DialogComponent {
     var rgx = /^[0-9]*\.?[0-9]*$/;
     return s.match(rgx);
   }
-
-  // let selectedCatId = this.subCats.filter(
-  //   (subItem: any) => this.selectedSubCategory === subItem._id
-  // )[0].categoriesID;
 }
