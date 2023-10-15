@@ -27,9 +27,11 @@ contract TransactionData {
         _;
     }
 
-    // If the transactionID has already been chosen, the updateTransaction method would be called instead
-    function setTransaction(uint256 transactionID, uint256 userID, uint256 productID, 
+    // If the transactionID has already been setup, the updateTransaction method would be called instead
+    function setTransaction(uint256 userID, uint256 productID, 
                             string memory productName, uint256 amount, uint256 unitPrice, string memory dateTime, string memory status) public onlyOwner {
+        uint256 transactionID = transactionArray.length; 
+
         if (transactions[transactionID].transactionID == 0) {
             Transaction memory transaction = Transaction(transactionID, userID, productID, productName, amount, unitPrice, dateTime, status);
             transactions[transactionID] = transaction;
@@ -63,7 +65,7 @@ contract TransactionData {
 
     Transaction public removeMe;
     
-    // Delete a transaction in the array by swap it to the last element, then remove that
+    // Delete a transaction in the array by swap it with the last element, then remove that
     function deleteTransaction(uint256 transactionID) public onlyOwner() {
         require(transactions[transactionID].transactionID != 0, "Transaction is not available");
         delete transactions[transactionID];
