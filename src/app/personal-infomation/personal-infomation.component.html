@@ -18,12 +18,12 @@
         </button>
     </div>
 
-    <div class="pInfo-content">
+    <div class="pInfo-content" *ngFor="let u of user">
         <h1>PROFILE</h1>
         <br>
         <hr>
         <br>
-        <h2>About me</h2>
+        <h2>{{u.UserName}}</h2>
         <br>
         <h3>Avatar</h3>
         <div class="pInfo-avatarSection">
@@ -34,14 +34,14 @@
         </div>
         <br>
         <h3>Display Name</h3>
-        <div class="pInfo-nameSection">
-            <button class="pInfo-nameSection-firstName" title="Edit First Name">Arena</button>
-            <button class="pInfo-nameSection-givenName" title="Edit Given Name">of Valor</button>
+        <div class="pInfo-nameSection" *ngFor="let u of user">
+            <button class="pInfo-nameSection-firstName" title="Edit First Name">{{u.FirstName}}</button>
+            <button class="pInfo-nameSection-givenName" title="Edit Given Name">{{u.LastName}}</button>
         </div>
         <br>
         <h3>Email</h3>
-        <div class="pInfo-emailSection">
-            <p class="pInfo-emailSection-email">arenaofvalor@garena.com</p>
+        <div class="pInfo-emailSection" *ngFor="let u of user">
+            <p class="pInfo-emailSection-email">{{u.UserEmail}}</p>
             <div class="pInfo-emailSection-editEmail">
                 <button mat-raised-button color="primary">Edit Email</button> 
             </div>
@@ -52,7 +52,7 @@
             <input class="pInfo-bioSection-bioInput" matInput placeholder="Enter your password" required>
         </mat-form-field>
         <div class="pInfo-signout">
-            <button mat-raised-button color="primary" routerLink="/">Log Out</button> 
+            <button mat-raised-button color="primary" (click)="logOut()" routerLink="/">Log Out</button> 
         </div>
     </div>
 </div>

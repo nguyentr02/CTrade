@@ -1,39 +1,43 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-market',
   templateUrl: './market.component.html',
-  styleUrls: ['./market.component.css']
+  styleUrls: ['./market.component.css'],
 })
 export class MarketComponent {
   constructor(
     private userService: UserService,
     private productService: ProductService,
+    private router: Router
   ) {}
   products: any;
- 
-
 
   // Get Data from Search result
 
-    search?: string;
-    async reloadPage($event) {
-      this.search = $event;
-      console.log("SEARCH NE");
-      try {
-        this.products = await this.productService.getProductsByName(this.search);
-        console.log(this.products);
-      } catch (error) {
-        console.log(error);
-      }
+  search?: string;
+  async reloadPage($event) {
+    this.search = $event;
+    console.log('SEARCH NE');
+    try {
+      this.products = await this.productService.getProductsByName(this.search);
+      console.log(this.products);
+    } catch (error) {
+      console.log(error);
     }
+  }
 
   // ______________________________________
 
   async ngOnInit(): Promise<void> {
-
+    // Check whether login or not by looking at
+    if (sessionStorage.length == 0) {
+      window.alert('Need to Login first!');
+      this.router.navigate(['/']);
+    }
     // Get Data to Render products on Market page
     try {
       this.products = await this.productService.getAllProducts();
@@ -57,7 +61,9 @@ export class MarketComponent {
       this.filter_status = 1;
     } else {
       try {
-        this.products = await this.productService.getProducts(this.filter_status);
+        this.products = await this.productService.getProducts(
+          this.filter_status
+        );
       } catch (error) {
         console.log(error);
       }

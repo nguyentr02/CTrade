@@ -23,6 +23,18 @@ export class UserService {
     return result.data;
   }
 
+  async searchID(id: number) {
+    let result = await lastValueFrom(
+      this.http.get<any>(environment.WSURL + '/users/id/' + id)
+    );
+
+    // if (!result.result) {
+    //   throw Error(result.error);
+    // }
+    console.log(result.result);
+    return result.result;
+  }
+
   async checkPassword(email: string, pwd: String) {
     let result = await lastValueFrom(
       this.http.get<any>(
@@ -60,4 +72,5 @@ export class UserService {
     console.log(result.data);
     return result.data;
   }
+
 }

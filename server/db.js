@@ -43,6 +43,23 @@ server.use((req, res, next) => {
 
 // ----------------------------------------------------------------------------------------------------------------
 
+// Get USER Data using UserID_____________
+server.get("/users/id/:id", (req, res) => {
+  var userID = req.params.id;
+  var sql = "SELECT * FROM ContractUser WHERE UserID = ?";
+  db.query(sql,[userID], function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res
+        .status(500)
+        .send({ status: false, error: "Cannot connect to Database" });
+    } else {
+      res.send({ status: true, result });
+    }
+  });
+});
+
+
 // ---------- View data in User Table - checked ----------
 server.get("/users/all", (req, res) => {
   var sql = "SELECT * FROM ContractUser";

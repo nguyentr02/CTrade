@@ -24,92 +24,21 @@
                     <table class="history-section-transaction-table">
                         <thead>
                             <tr class="history-table-header">
-                                <th><span style="width: 35%;">Trade</span>
+                                <th><span style="width: 35%;">Name</span>
                                 <th><span >Amount</span>
-                                <th><span >Unit</span>
                                 <th><span >Price</span>
+                                <th><span >Date</span>
                                 <th><span >Date</span>
                                 <th><span >Status</span>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="color:white;">
-                                <td class="history-trade">
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td class="history-amount">$2,000.83</td>
-                                <td class="history-unit">3,5</td>
-                                <td class="history-price">$881.50</td>
-                                <td class="history-date">Jan 13, 2023</td>
-                                <td class="history-status">Success</td>
-                            </tr>
-                            <!-- More rows here -->
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td>Success</td>
-                            </tr>
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td>Success</td>
-                            </tr>
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td class="history-processing">Processing</td>
-                            </tr>
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td>Success</td>
-                            </tr>
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td class="history-fail">Fail</td>
-                            </tr>
-                            <tr style="color:white;">
-                                <td>
-                                    <img src="assets\img\tether_logo.jpg" width=20px>
-                                    Tether Inc.
-                                </td>
-                                <td>$2,000.83</td>
-                                <td>3,5</td>
-                                <td>$881.50</td>
-                                <td>Jan 13, 2023</td>
-                                <td>Success</td>
+                            <tr style="color:white;" *ngFor="let trans of transactions">
+                                <td class="history-name">{{trans.ProdName}}</td>
+                                <td class="history-amount">{{trans.TransAmount}}</td>
+                                <td class="history-price">{{trans.ProdPrice}}</td>
+                                <td class="history-date">{{trans.TransDate}}</td>
+                                <td class="history-status">{{trans.TransStatus}}</td>
                             </tr>
                         </tbody>
                     </table>

@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   user: any;
+  userID: any;
   emailData: any;
   async verifyAccount(userEmail:any,userPassword: any) {
     // this.router.navigate(['/market']);
@@ -64,6 +65,12 @@ export class LoginComponent implements OnInit {
           } else {
             // Correct email and password
             console.log("Correct!!!")
+            
+            this.userID = this.user[0].UserID;
+            // this.userService.setUserID(this.userID);
+
+            sessionStorage.removeItem('userID')
+            sessionStorage.setItem('userID',this.userID);
             this.router.navigate(['/market']);
           }
         }
