@@ -27,19 +27,14 @@ contract UserData {
         _;
     }
 
-    // If the userID has already been set up, the updateTransaction method would be called instead
+    // Add the new user
     function setUser(string memory username, string memory pwd, 
                      string memory firstName, string memory lastName, string memory userEmail) public onlyOwner {
         uint256 userID = userArray.length; 
 
-        if (users[userID].userID == 0) {
-            User memory user = User(userID, username, pwd, firstName, lastName, userEmail);
-            users[userID] = user;
-            userArray.push(user);
-        }
-        else {
-            updateUser(userID, username, pwd, firstName, lastName, userEmail);
-        }
+        User memory user = User(userID, username, pwd, firstName, lastName, userEmail);
+        users[userID] = user;
+        userArray.push(user);
     }
 
     function getUser(uint256 userID) public view returns (string memory, string memory, string memory, string memory, string memory) {
