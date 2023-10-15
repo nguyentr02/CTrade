@@ -27,8 +27,11 @@ contract UserData {
         _;
     }
 
-    function setUser(uint256 userID, string memory username, string memory pwd, 
+    // If the userID has already been set up, the updateTransaction method would be called instead
+    function setUser(string memory username, string memory pwd, 
                      string memory firstName, string memory lastName, string memory userEmail) public onlyOwner {
+        uint256 userID = userArray.length; 
+
         if (users[userID].userID == 0) {
             User memory user = User(userID, username, pwd, firstName, lastName, userEmail);
             users[userID] = user;
@@ -60,6 +63,7 @@ contract UserData {
         userArray.push(user);
     }
 
+    // Delete a user in the array by swap it with the last element, then remove that
     function deleteUser(uint256 userID) public onlyOwner() {
         require(users[userID].userID != 0, "User is not available");
         delete users[userID];
