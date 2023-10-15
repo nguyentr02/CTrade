@@ -31,7 +31,6 @@ export class HistoryComponent {
     this.userID = parseInt(sessionStorage.getItem('userID'));
     console.log(this.userID)
 
-    // GET USER Detail from UserID
     try {
       this.transactions = await this.transactionService.getTransactionsByID(this.userID)
     } catch (error) {

@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
   userID: any;
   emailData: any;
   async verifyAccount(userEmail:any,userPassword: any) {
-    // this.router.navigate(['/market']);
 
 
     // Only proceed when type in valid email and password
