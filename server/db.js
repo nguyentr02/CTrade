@@ -207,6 +207,23 @@ server.get("/products/search/:name", (req, res) => {
   });
 });
 
+// _______________________
+// TRANSACTIONS
+server.get("/transactions/:id", (req,res) => {
+  var userID = req.params.id;
+  var sql = "SELECT * FROM ContractTransaction WHERE UserID = ?";
+  db.query(sql, [userID], function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res
+        .status(500)
+        .send({ status: false, error: "Cannot connect to Database" });
+    } else {
+      res.json({status: true, result});
+    }
+  });
+}) 
+
 // server.get("/users/getEmail/:email", (req, res) => {
 //   // console.log("Get Products by SubCategoryID");
 //   let userEmail = req.params.email;
