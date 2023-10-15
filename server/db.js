@@ -299,29 +299,3 @@ server.get("/transactions/:id", (req,res) => {
   });
 }) 
 
-// server.get("/users/getEmail/:email", (req, res) => {
-//   // console.log("Get Products by SubCategoryID");
-//   let userEmail = req.params.email;
-
-//   async.series([
-//       (callback) => {
-//         db.query(sql, function (err,result) {
-//           if (err) {
-//             return callback(err);
-//           }
-//           if (!result) {
-//             return callback(Error());
-//           }
-//           users = result;
-//         })
-//       }
-//   ],
-//       (err, result) => {
-//           if (err) {
-//               console.log(err);
-//               return res.json({ result: false, error: err.message });
-//           }
-//           res.json({ result: true, users });
-//       }
-//   )
-// })

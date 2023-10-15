@@ -82,6 +82,7 @@ export class DialogComponent {
     }
   }
 
+  // Function to validate input. Only number 0-9 and '.' is acceptable
   validate(s: string) {
     var rgx = /^[0-9]*\.?[0-9]*$/;
     return s.match(rgx);

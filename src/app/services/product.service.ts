@@ -60,7 +60,8 @@ export class ProductService {
     return result.result;
   }
 
-  // 
+
+  // For storing ProdID
   ProdId: any;
   saveProdID(id:number) {
     this.ProdId = id;
