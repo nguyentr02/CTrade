@@ -27,19 +27,14 @@ contract TransactionData {
         _;
     }
 
-    // If the transactionID has already been setup, the updateTransaction method would be called instead
+    // Add the new transaction
     function setTransaction(uint256 userID, uint256 productID, 
                             string memory productName, uint256 amount, uint256 unitPrice, string memory dateTime, string memory status) public onlyOwner {
         uint256 transactionID = transactionArray.length; 
 
-        if (transactions[transactionID].transactionID == 0) {
-            Transaction memory transaction = Transaction(transactionID, userID, productID, productName, amount, unitPrice, dateTime, status);
-            transactions[transactionID] = transaction;
-            transactionArray.push(transaction);
-        }
-        else {
-            updateTransaction(transactionID, userID, productID, productName, amount, unitPrice, dateTime, status);
-        }
+        Transaction memory transaction = Transaction(transactionID, userID, productID, productName, amount, unitPrice, dateTime, status);
+        transactions[transactionID] = transaction;
+        transactionArray.push(transaction);
     }
 
     function getTransaction(uint256 transactionID) public view returns (uint256, uint256, string memory, uint256, uint256, string memory, string memory) {
