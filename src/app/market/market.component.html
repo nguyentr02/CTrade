@@ -15,20 +15,6 @@
             <coin-card [items]="product"></coin-card>
         </mat-grid-tile>
     </mat-grid-list>
-    
-    <div class = "market-navigator">
-        <div class = "prev-btn">
-            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_back_ios_new </span>
-            <p>Previous</p>
-        </div>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <div class = "next-btn">
-            <p>Next</p>
-            <span class="material-icons" style="color: rgb(255, 255, 255);"> arrow_forward_ios </span>
-        </div>
-    </div>
 </div>
 
 
@@ -44,57 +30,25 @@
         </div>
     </div>
     <mat-grid-list cols="1" rowHeight="1:1" class="mobile-marketPlace-body">
-        <mat-grid-tile class="mobile-marketPlace-body-product">
+        <mat-grid-tile class="mobile-marketPlace-body-product" *ngFor="let product of products">
             <div class="mobile-marketPlace-body-product-box">
-                <img src="assets/img/bitcoin.jpg" width=100% height=70%>
+                <img [src]="product.ProdImage" width=100% height=70%>
                 <div class="mobile-marketPlace-body-product-infoBox">
-                    <p class="mobile-header">Bitcoin</p>
+                    <p class="mobile-header">{{product.ProdName}}</p>
                     <div class="mobile-marketPlace-body-product-info">
                         <div>
                             <p class="mobile-sub-header">Price</p>
-                            <p class="mobile-info">$200</p>
+                            <p class="mobile-info">{{product.ProdPrice}}</p>
                         </div>
                         <div>
                             <p class="mobile-sub-header">Quantity</p>
-                            <p class="mobile-info">400</p>
+                            <p class="mobile-info">{{product.ProdQty}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </mat-grid-tile>
-
-        <mat-grid-tile class="mobile-marketPlace-body-product">
-            <div class="mobile-marketPlace-body-product-box">
-                <img src="assets/img/bitcoin.jpg" width=100% height=70%>
-                <div class="mobile-marketPlace-body-product-infoBox">
-                    <p class="mobile-header">Bitcoin</p>
-                    <div class="mobile-marketPlace-body-product-info">
-                        <div>
-                            <p class="mobile-sub-header">Price</p>
-                            <p class="mobile-info">$200</p>
-                        </div>
-                        <div>
-                            <p class="mobile-sub-header">Quantity</p>
-                            <p class="mobile-info">400</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </mat-grid-tile>
-
     </mat-grid-list>
-    
-    <div class="mobile-market-navigator">
-        <div class="mobile-prev-btn">
-            <span class="material-icons">arrow_back_ios_new</span>
-        </div>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <div class="mobile-next-btn">
-            <span class="material-icons">arrow_forward_ios</span>
-        </div>
-    </div>
 </div>
 <app-footer></app-footer>
 

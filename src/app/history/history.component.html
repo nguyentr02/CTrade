@@ -8,7 +8,9 @@
         <mat-tab-group (selectedTabChange)="onTabChange($event)" mat-stretch-tabs="false" mat-align-tabs="start">
             <mat-tab>
                 <ng-template mat-tab-label>
-                    <span [ngClass]="{'my-custom-class': activeTabIndex === 0, 'active-tab-label': activeTabIndex === 0}">All trades</span>
+                    <span
+                        [ngClass]="{'my-custom-class': activeTabIndex === 0, 'active-tab-label': activeTabIndex === 0}">All
+                        trades</span>
                 </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
@@ -25,10 +27,10 @@
                         <thead>
                             <tr class="history-table-header">
                                 <th><span style="width: 35%;">Name</span>
-                                <th><span >Amount</span>
-                                <th><span >Price</span>
-                                <th><span >Date</span>
-                                <th><span >Status</span>
+                                <th><span>Amount</span>
+                                <th><span>Price</span>
+                                <th><span>Date</span>
+                                <th><span>Status</span>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,7 +39,7 @@
                                 <td class="history-amount">{{trans.TransAmount}}</td>
                                 <td class="history-price">{{trans.ProdPrice}}</td>
                                 <td class="history-date">{{trans.TransDate}}</td>
-                                <td class="history-status">{{trans.TransStatus}}</td>
+                                <td class="history-status">{{trans.Trans_Status}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -46,7 +48,8 @@
 
             <mat-tab>
                 <ng-template mat-tab-label>
-                    <span [ngClass]="{'my-custom-class': activeTabIndex === 1, 'active-tab-label': activeTabIndex === 1}">Buy</span>
+                    <span
+                        [ngClass]="{'my-custom-class': activeTabIndex === 1, 'active-tab-label': activeTabIndex === 1}">Buy</span>
                 </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
@@ -62,9 +65,8 @@
                     <table class="history-section-transaction-table">
                         <thead>
                             <tr class="history-table-header">
-                                <th><span style="float: left;">Trade</span>
+                                <th><span style="width: 35%;">Name</span>
                                 <th><span style="float: left;">Amount</span>
-                                <th><span style="float: left;">Unit</span>
                                 <th><span style="float: left;">Price</span>
                                 <th><span style="float: left;">Date</span>
                                 <th><span style="float: left;">Status</span>
@@ -83,7 +85,7 @@
                                 <td class="history-status">Success</td>
                             </tr>
                             <!-- More rows here -->
-                            
+
                             <tr style="color:white;">
                                 <td>
                                     <img src="assets\img\tether_logo.jpg" width=20px>
@@ -119,12 +121,13 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>    
+                </div>
             </mat-tab>
 
             <mat-tab>
                 <ng-template mat-tab-label>
-                    <span [ngClass]="{'my-custom-class': activeTabIndex === 2, 'active-tab-label': activeTabIndex === 2}">Sell</span>
+                    <span
+                        [ngClass]="{'my-custom-class': activeTabIndex === 2, 'active-tab-label': activeTabIndex === 2}">Sell</span>
                 </ng-template>
                 <div class="history-section-function">
                     <div class="history-section-function-search">
