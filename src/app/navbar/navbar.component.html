@@ -2,7 +2,7 @@
     <img routerLink="/market" class="navbar-logo" src="assets\img\favicon.ico"/>
     <div class="navbar-search">
         <mat-icon>search</mat-icon>
-        <input class="navbar-search-input" placeholder="Search items, category"/>
+        <input class="navbar-search-input" #search (keyup.enter)="searchFunc(search.value)" placeholder="Search items, category"/>
     </div>
     <div class="navbar-right">
         <div class="navbar-history">
@@ -18,7 +18,7 @@
 <div class="mobile-navbar">
     <img routerLink="/home" class="mobile-navbar-logo" src="assets\img\favicon.ico"/>
     <div class="mobile-navbar-search">
-        <mat-icon>search</mat-icon>
+        <mat-icon >search</mat-icon>
     </div>
     <div class="mobile-navbar-history">
         <mat-icon routerLink="/history">history</mat-icon>

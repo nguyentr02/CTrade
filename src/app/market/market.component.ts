@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { ProductService } from '../services/product.service';
 
@@ -13,6 +13,24 @@ export class MarketComponent {
     private productService: ProductService,
   ) {}
   products: any;
+ 
+
+
+  // Get Data from Search result
+
+    search?: string;
+    async reloadPage($event) {
+      this.search = $event;
+      console.log("SEARCH");
+      try {
+        this.products = await this.productService.getProductsByName(this.search);
+        console.log(this.products);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+  // ______________________________________
 
   async ngOnInit(): Promise<void> {
     

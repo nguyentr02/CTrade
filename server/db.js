@@ -191,6 +191,22 @@ server.get("/products/:category", (req, res) => {
   });
 });
 
+server.get("/products/search/:name", (req, res) => {
+  
+  var prodName = req.params.name;
+  var sql = "SELECT * FROM ContractProduct WHERE SUBSTRING(ProdName,1,"+prodName.length+") = ?";
+  db.query(sql, [prodName], function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res
+        .status(500)
+        .send({ status: false, error: "Cannot connect to Database" });
+    } else {
+      res.json({status: true, result});
+    }
+  });
+});
+
 // server.get("/users/getEmail/:email", (req, res) => {
 //   // console.log("Get Products by SubCategoryID");
 //   let userEmail = req.params.email;
