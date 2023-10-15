@@ -26,6 +26,9 @@ import { HistoryComponent } from './history/history.component';
 import { PersonalInfomationComponent } from './personal-infomation/personal-infomation.component';
 import { CoinCardComponent } from './coin-card/coin-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,15 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HistoryComponent,
     PersonalInfomationComponent,
-    CoinCardComponent
+    CoinCardComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatDialogModule,
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
@@ -52,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
+    MatSelectModule,
     MatTabsModule,
     HttpClientModule
   ],

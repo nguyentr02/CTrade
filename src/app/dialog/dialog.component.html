@@ -1,0 +1,13 @@
+<div class="dialog">
+    <h1 class="dialog-tittle">What is your choice</h1>
+    <div class="dialog-container">
+        <mat-form-field class="dialog-form">
+            <input class="dialog-input" matInput placeholder="Enter your amount"
+                [formControl]="amount" required>
+        </mat-form-field>
+        <div class="dialog-button-container">
+            <button class="dialog-buy-button" (click)="buyFunc(amount.value)">BUY</button>
+            <button class="dialog-sell-button" (click)="sellFunc(amount.value)">SELL</button>
+        </div>
+    </div>
+</div>

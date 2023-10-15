@@ -1,0 +1,35 @@
+.dialog {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dialog-tittle {
+    color: red;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.dialog-container {
+    width: 100%;
+}
+
+.dialog-form {
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-bottom: 10%;
+}
+
+.dialog-button-container {
+    width: 100%;
+}
+
+.dialog-buy-button, .dialog-sell-button {
+    width: 30%;
+    height: 70px;
+    font-size: 2rem;
+    margin-left: 12%;
+    background-color: black;
+    color: white;
+}

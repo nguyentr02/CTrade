@@ -47,4 +47,26 @@ export class ProductService {
     console.log(result);
     return result.result;
   }
+  async getProductbyID(id: Number) {
+    let result = await lastValueFrom(
+      this.http.get<any>(environment.WSURL + '/products/ID/' + id)
+    );
+
+    if (!result.result) {
+      throw Error(result.error);
+    };
+
+    console.log(result);
+    return result.result;
+  }
+
+  // 
+  ProdId: any;
+  saveProdID(id:number) {
+    this.ProdId = id;
+  }
+
+  getProdID() {
+    return this.ProdId;
+  }
 }

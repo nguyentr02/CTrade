@@ -149,6 +149,22 @@ server.post("/users/signUp", (req, res) => {
     }
   );
 });
+// _____________________Get Product by ID
+server.get("/products/ID/:id", (req,res) => {
+  var prodID = req.params.id;
+  var sql = "SELECT * FROM ContractProduct WHERE ProdID = ?";
+  db.query(sql, [prodID], function (err, result) {
+    if (err) {
+      console.error("Error executing SQL query:", err);
+      res
+        .status(500)
+        .send({ status: false, error: "Cannot connect to Database" });
+    } else {
+      res.json({status: true, result});
+    }
+  });
+}) 
+
 
 // ------------ Test add product - checked -------------
 server.post("/products/add", (req, res) => {
@@ -226,6 +242,48 @@ server.get("/products/search/:name", (req, res) => {
 
 // _______________________
 // TRANSACTIONS
+// Add Transactions
+server.post("/transactions/add/", (req, res) => {
+  let detail = {
+    UserID: req.body.UserID,
+    ProdID: req.body.ProdID,
+    ProdName: req.body.ProdName,
+    TransAmount: req.body.TransAmount,
+    ProdPrice: req.body.ProdPrice,
+    TransDate: req.body.TransDate,
+    Trans_Status: req.body.Trans_Status,
+    TransMethod: req.body.TransMethod
+  };
+
+  let sql =
+    "INSERT INTO ContractTransaction (UserID, ProdID,ProdName,TransAmount,ProdPrice,TransDate,Trans_Status,TransMethod) VALUES (?, ?, ?, ?, ?,?,?,?)";
+  db.query(
+    sql,
+    [
+      detail.UserID,
+      detail.ProdID,
+      detail.ProdName,
+      detail.TransAmount,
+      detail.ProdPrice,
+      detail.TransDate,
+      detail.Trans_Status,
+      detail.TransMethod
+    ],
+    function (err) {
+      //for testing the details, can be removed later
+      console.log("Received request body:", req.body);
+      if (err) {
+        console.error("Error executing SQL query:", err);
+        res
+          .status(500)
+          .send({ status: false, error: "Cannot add user details" });
+      } else {
+        res.send({ status: true, message: "Added" });
+      }
+    }
+  );
+});
+
 server.get("/transactions/:id", (req,res) => {
   var userID = req.params.id;
   var sql = "SELECT * FROM ContractTransaction WHERE UserID = ?";
